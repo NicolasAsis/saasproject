@@ -1,0 +1,47 @@
+@import './MenuItem/mitem.scss';
+
+$w:300px;
+
+
+
+@mixin flex($dir:column){
+    display: flex;
+    flex-direction:$dir;
+
+}
+.menu {
+    background-color: rgb(96, 123, 205);
+    width:$w;
+    @include flex();
+
+    h1 {
+        font-size:$fs;
+        padding-left: $m;
+
+    }
+
+    .icon_style {
+        margin: 5px;
+    }
+
+    .image_tag {
+        width: 100px;
+        height: 100px;
+    }
+
+    .dropmenu {
+        max-height: 0px;
+        overflow: hidden;
+        transition:max-height 0.3s;
+       
+    };
+
+    .dropmenu_active {
+        max-height: 100vh;
+
+      
+    };
+
+
+}
+
