@@ -25,11 +25,18 @@ height: 100vh;
 
     .tab2 {
         flex: 1;
-        background-color: grey;
+        background-color: blue;
         display: flex;
         flex-direction: row; 
         border-top-right-radius: 5px;
         padding: 10px;
+    }
+
+    .tab:active {
+        background-color: blue;
+    }
+    .tab-inactive {
+        background-color: grey;
     }
 
     .white-space {
