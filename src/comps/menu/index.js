@@ -50,17 +50,5 @@ Menu.defaultProps = {
 };
 
 
-// <MenuItem
-// itemTitle="title 1"
-// size={30}
-// color="white"
-// />
-// same difference just one is easier
-// var obj = {
-//     itemTitle:"title 1",
-//     size:30,
-//     color:'white'
-// }
-//<MenuItem {...o}
 
 export default Menu;

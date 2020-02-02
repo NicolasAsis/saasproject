@@ -1,0 +1,23 @@
+
+
+.dropdown {
+    display: flex;
+    flex: 1;
+    height: 5vh;
+    background-color:black;
+    border-radius: 40px;
+    font-size: 20pt;
+    color: blanchedalmond;
+    align-items: center;
+    justify-content: center;
+
+    .list {
+        font-size: 40pt;
+        color: green;
+        background-color: white;
+        margin: 3%;
+        display: flex;
+        flex: 3;
+        display: none;
+    }
+}
