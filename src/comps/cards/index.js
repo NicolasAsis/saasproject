@@ -50,6 +50,15 @@ function Card({ }){
         
             <div className="body">
                 <FilterBar />
+                <div className="item-section">
+                    <p className="item">item aray map goes here</p>
+                    <p className="item">item aray map goes here</p>
+                    <p className="item">item aray map goes here</p>
+                    <p className="item">item aray map goes here</p>
+                    <p className="item">item aray map goes here</p>
+                    <p className="item">item aray map goes here</p>
+  
+                </div>
              
             </div>
 
