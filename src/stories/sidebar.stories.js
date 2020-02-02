@@ -14,4 +14,4 @@ export default {
 export const DefaultSidebar = () => {
     return  <Sidebar />
 }
-    
+

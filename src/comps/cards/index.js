@@ -29,7 +29,6 @@ function Card({ }){
         <div className="card">
             <div className="tab-container">
        
-        
             <div 
                 className={cnOne} 
                 onClick={()=>{
@@ -58,14 +57,10 @@ function Card({ }){
                     <p className="item">item aray map goes here</p>
                     <p className="item">item aray map goes here</p>
   
-                </div>
-             
+                </div>     
             </div>
-
         </div>
           )
-
-
 }
 
 Card.defaultProps = {
