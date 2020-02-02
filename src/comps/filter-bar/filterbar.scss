@@ -1,5 +1,5 @@
 .barbody {
-    background-color: blue;
+    background-color: white;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -10,7 +10,7 @@
         text-align: center;
         margin: 5px;
         flex: 1;
-        background-color: rgb(140, 120, 199);
+        background-color: #888FD3;
     }
     .search {
         border-radius: 20px;
@@ -18,7 +18,7 @@
         margin: 5px;
         font-size: 13pt;
         flex: 1.5;
-        border: 2px solid rgba(103, 89, 196, 0.66);
+        border: 2px solid #888FD3;
     }
 
     .space {

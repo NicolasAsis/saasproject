@@ -16,24 +16,27 @@ height: 100vh;
     }
     .tab1 {
         flex: 1;
-        background-color: blue;
+        background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: row; 
         border-top-left-radius: 5px;
         padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.249) 1px 1px 20px 10px;
+        
     }
 
     .tab2 {
         flex: 1;
-        background-color: blue;
+        background-color: rgb(255, 255, 255);
         display: flex;
         flex-direction: row; 
         border-top-right-radius: 5px;
         padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.249) 1px 1px 20px 10px;
     }
 
     .tab:active {
-        background-color: blue;
+        background-color: white;
     }
     .tab-inactive {
         background-color: grey;
@@ -41,12 +44,12 @@ height: 100vh;
 
     .white-space {
         flex: 5;
-        background-color: white;
+        background-color: none;
     }
 
     .body {
         color: orange;
-        background-color: blue;
+        background-color: white;
         box-shadow: black 10px 10px 32px;
         padding: 10px;
         display: flex;
@@ -62,8 +65,9 @@ height: 100vh;
     }
     .item {
         flex: 1;
-        margin:10px;
-        
-        background-color: red;
+        margin:1px;
+        justify-content: center;
+        background-color: grey;
+        padding: 5px;
     }
 }

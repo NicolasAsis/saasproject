@@ -5,7 +5,7 @@ function FilterBar(){
     return (
         <div className="barbody">
    
-            <input  type='text' onChange="SearchInventory()" className="search" />
+            <input  type='text' onChange="SearchInventory()" className="search" placeholder="search" />
 
             <div className="space"></div>
 
