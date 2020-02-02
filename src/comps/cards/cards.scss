@@ -21,7 +21,7 @@ height: 100vh;
         flex-direction: row; 
         border-top-left-radius: 5px;
         padding: 10px;
-        box-shadow: rgba(0, 0, 0, 0.249) 1px 1px 20px 10px;
+        box-shadow: rgba(0, 0, 0, 0.249) 1px 1px 50px 10px;
         
     }
 
@@ -32,7 +32,7 @@ height: 100vh;
         flex-direction: row; 
         border-top-right-radius: 5px;
         padding: 10px;
-        box-shadow: rgba(0, 0, 0, 0.249) 1px 1px 20px 10px;
+        box-shadow: rgba(0, 0, 0, 0.249) 1px 1px 50px 10px;
     }
 
     .tab:active {
@@ -50,7 +50,7 @@ height: 100vh;
     .body {
         color: orange;
         background-color: white;
-        box-shadow: black 10px 10px 32px;
+        box-shadow: rgba(0, 0, 0, 0.585) 10px 50px 52px;
         padding: 10px;
         display: flex;
         flex: 1;
