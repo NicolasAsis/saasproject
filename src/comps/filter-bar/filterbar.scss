@@ -1,0 +1,28 @@
+.barbody {
+    background-color: blue;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    
+    .item {
+        width: 100px;
+        text-align: center;
+        margin: 5px;
+        flex: 1;
+        background-color: rgb(140, 120, 199);
+    }
+    .search {
+        border-radius: 20px;
+        text-align: center;
+        margin: 5px;
+        font-size: 13pt;
+        flex: 1.5;
+        border: 2px solid rgba(103, 89, 196, 0.66);
+    }
+
+    .space {
+        flex: 0.8;
+    }
+}
+

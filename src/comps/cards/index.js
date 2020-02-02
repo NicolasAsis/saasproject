@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import FilterBar from '../filter-bar';
 
 
 function Card({ }){
@@ -49,7 +49,8 @@ function Card({ }){
             </div>
         
             <div className="body">
-                Filter goes here
+                <FilterBar />
+             
             </div>
 
         </div>
