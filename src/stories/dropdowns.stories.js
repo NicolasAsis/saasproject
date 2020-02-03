@@ -10,18 +10,46 @@ export default {
 }
 
 
+var items = [
+    {
+        itemTitle:'Profile',
+        onClick:()=>{alert("go to profile")}
+    },
+    {
+        itemTitle:'Settings',
+        onClick:()=>{alert("go to Settings")}
+    },
+    {
+        itemTitle:'DashBoard',
+        active:true
+    },
+
+    {
+        itemTitle:'Stats',
+        onClick:()=>{alert("go to Stats")}
+    }
+]
+
+
 export const monthDropdown = () => {
     return  <Dropdown
-            title="Month" />
+            title='Month'
+            items={items}
+            dropdown={true} 
+        />
 }
     
 export const brandDropdown = () => {
     return  <Dropdown
+            items={items}
+            dropdown={true} 
             title="Brand" />
 }
     
 export const modelDropdown = () => {
     return  <Dropdown
+            items={items}
+            dropdown={true} 
             title="Model" />
 }
     

@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: row;
     flex: 1;
+ 
+   
     
     .item {
         width: 100px;
@@ -11,6 +13,7 @@
         margin: 5px;
         flex: 1;
         background-color: #888FD3;
+        
     }
     .search {
         border-radius: 20px;

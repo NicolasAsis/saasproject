@@ -1,17 +1,59 @@
 import React from 'react'
-import Dropdown from '../dropdowns/index'
+import Dropdown from '../dropdowns'
 
 
-function FilterBar(){
+
+var items = [
+    {
+        itemTitle:'Profile',
+        onClick:()=>{alert("go to profile")}
+    },
+    {
+        itemTitle:'Settings',
+        onClick:()=>{alert("go to Settings")}
+    },
+    {
+        itemTitle:'DashBoard',
+        active:true
+    },
+
+    {
+        itemTitle:'Stats',
+        onClick:()=>{alert("go to Stats")}
+    }
+]
+
+
+function FilterBar({}){
+
+
+    
     return (
         <div className="barbody">
         <div className="space"></div>
-            <Dropdown title="Month" />
-            <Dropdown title="Brand" />
-            <Dropdown title="Model" />
+            
+            <Dropdown 
+            items={items}
+            dropdown={true}
+            menuTitle="month"
+            
+            />
+            <Dropdown 
+            items={items}
+            dropdown={true}
+            menuTitle="model"
+            />
+            <Dropdown 
+            items={items}
+            dropdown={true}
+            menuTitle="year"
+            />
+      
+    
+         
         <div className="space"></div>
         <div className="space"></div>
-            <input  type='text' onChange="SearchInventory()" className="search" placeholder="search" />
+        <input  type='text' onChange="SearchInventory()" className="search" placeholder="search" />
             
 
         </div>
