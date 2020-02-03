@@ -2,7 +2,7 @@
 @import './dropdown-Items/dditems.scss';
 
 
-$w:00px;
+$w:50px;
 
 
 
@@ -11,47 +11,70 @@ $w:00px;
     flex-direction:$dir;
 
 }
-.dropdown {
-    background-color: rgb(96, 123, 205);
+
+.dd_container {
+    display: flex;
+    flex-direction: row;
     flex: 1;
+    height: 80%;
+}
+
+
+.dd_title {
+    flex: 1;
+    font-size: 13pt;
+    margin: 0px;
+
+ 
+    
+  
+}
+
+
+.dropdown {
+    border: 2px solid #888FD3;
+    background-color: white;
+    flex: 1;
+    margin-left: 1vw;
+    margin-right: 1vw;
     display: flex;
     border-radius: 40px;
     @include flex();
 
-   
 
-    h1 {
-        font-size:$fs;
-        padding-left: $m;
+        .icon_style {
+            width: $w;
+            flex: 1;
+        }
 
-    }
-
-    .icon_style {
-        width: 100px;
-        height: 15px;
-        float: right;
-  
-        
-        
-    }
-
-    .image_tag {
-        width: 50px;
-        height: 50px;
-    }
-
-    .dropmenu {
-        max-height: 0px;
-        overflow: hidden;
-        transition:max-height 0.3s;
-       
-    };
-
-    .dropmenu_active {
-        max-height: 100vh;
-
+        .icon_holder {
+            display: flex;
+            flex-direction: row;
+            margin: 1vh;
       
-    };
+        }
+
+        .icon_holder_space {
+        flex:3;
+        }
+
+        .image_tag {
+            width: 50px;
+            height: 50px;
+        }
+
+        .dropmenu {
+            max-height: 0px;
+            overflow: hidden;
+            transition:max-height 0.3s;
+        
+        };
+
+        .dropmenu_active {
+            max-height: 100vh;
+
+        
+        };
 
 
 }

@@ -19,18 +19,26 @@ function Menu({items, menuTitle, children, dropdown}){
     }
 
     return (
-        <div className="dropdown" onClick={()=>{
-            setDrop(!drop)
-        }}>
-        <h1>
-            {menuTitle}
-            <FiMenu className="icon_style" />
-        </h1>
-            {children}
-            <div id="item_container" className={cn}>
-                {items.map((o,i) => {
-                    return <DdItem {...o}/> 
-                })}
+        <div className="dd_container">
+           <p className="dd_title">{menuTitle}</p>
+            <div className="dropdown" onClick={()=>{
+                setDrop(!drop)
+            }}>   
+            
+            <div className="icon_holder">
+                <div className="icon_holder_space"></div>
+                <div className="icon_style">
+                <FiMenu />
+                </div>
+            
+            </div>
+        
+                {children}
+                <div id="item_container" className={cn}>
+                    {items.map((o,i) => {
+                        return <DdItem {...o}/> 
+                    })}
+                </div>
             </div>
         </div>
     )
