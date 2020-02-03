@@ -34,6 +34,7 @@ var items = [
 export const monthDropdown = () => {
     return  <Dropdown
             title='Month'
+            itemTitle="Month"
             items={items}
             dropdown={true} 
         />
@@ -43,13 +44,15 @@ export const brandDropdown = () => {
     return  <Dropdown
             items={items}
             dropdown={true} 
-            title="Brand" />
+            title="Brand"
+            itemTitle="" />
 }
     
 export const modelDropdown = () => {
     return  <Dropdown
             items={items}
             dropdown={true} 
-            title="Model" />
+            title="Model"
+            itemTitle="" />
 }
     

@@ -5,7 +5,7 @@ import DdItem from './dropdown-Items';
 import { FiMenu } from 'react-icons/fi';
 
 
-function Menu({items, menuTitle, children, dropdown}){
+function Dropdown({items, title, menuTitle, children, dropdown}){
 
     const [drop, setDrop] = useState(false)
     var cn = "dropmenu"
@@ -20,7 +20,7 @@ function Menu({items, menuTitle, children, dropdown}){
 
     return (
         <div className="dd_container">
-           <p className="dd_title">{menuTitle}</p>
+           <p className="dd_title">{title}</p>
             <div className="dropdown" onClick={()=>{
                 setDrop(!drop)
             }}>   
@@ -44,20 +44,22 @@ function Menu({items, menuTitle, children, dropdown}){
     )
 }
 
-Menu.defaultProps = {
+Dropdown.defaultProps = {
+  
     items:[{
         itemTitle:"one"
     }, {
         itemTitle:"two"
     }],
     menuTitle: "Default Title",
+    title:"",
     children: null,
     dropdown:false
 };
 
 
 
-export default Menu;
+export default Dropdown;
 
 
 // import React, {useState} from 'react';

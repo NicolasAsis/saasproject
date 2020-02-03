@@ -35,18 +35,18 @@ function FilterBar({}){
             <Dropdown 
             items={items}
             dropdown={true}
-            menuTitle="month"
+            title="month"
             
             />
             <Dropdown 
             items={items}
             dropdown={true}
-            menuTitle="model"
+            title="model"
             />
             <Dropdown 
             items={items}
             dropdown={true}
-            menuTitle="year"
+            title="year"
             />
       
     
