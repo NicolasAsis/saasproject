@@ -27,6 +27,21 @@ height: 100vh;
         
     }
 
+
+    .item_details {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        background-color: rgb(193, 193, 193);
+    }
+
+    .detail_heading {
+        flex: 1;
+        color: rgb(77, 77, 77);
+        text-align: center;
+        margin: 20px;
+    }
+
     .tab2 {
         flex: 1;
         background-color: rgb(255, 255, 255);
