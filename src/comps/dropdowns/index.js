@@ -3,28 +3,28 @@ import './dropdowns.scss'
 
 
 
-function Dropdown({isOn, }){
-    if (isOn === true) {
-        
+function Dropdown({title, image}){
+
+
     
     return (
 
-        <div className="dropdown">
-            Month
-           
-            <div className="list">
-                Drop down
-            </div>
+        <div className="dropdown-body">
+            <p className="title">
+                {title}
+            </p>
+            <div className="dropdown"></div>
         </div>
         
           )
 
 
 }
-}
+
 Dropdown.defaultProps = {
-    className:"main",
-    isOn: true
+    title:"no title",
+    items:[{}]
+  
 }
 
 

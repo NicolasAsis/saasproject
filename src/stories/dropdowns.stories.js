@@ -9,7 +9,19 @@ export default {
     Component: "Dropdown"
 }
 
-export const DefaultDropdown = () => {
-    return  <Dropdown />
+
+export const monthDropdown = () => {
+    return  <Dropdown
+            title="Month" />
+}
+    
+export const brandDropdown = () => {
+    return  <Dropdown
+            title="Brand" />
+}
+    
+export const modelDropdown = () => {
+    return  <Dropdown
+            title="Model" />
 }
     

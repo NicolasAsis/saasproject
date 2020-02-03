@@ -1,23 +1,26 @@
 
 
-.dropdown {
+.dropdown-body {
     display: flex;
+    flex-direction: row;
     flex: 1;
-    height: 5vh;
-    background-color:black;
-    border-radius: 40px;
-    font-size: 20pt;
-    color: blanchedalmond;
     align-items: center;
     justify-content: center;
+    margin: 1%;
 
-    .list {
-        font-size: 40pt;
-        color: green;
-        background-color: white;
-        margin: 3%;
-        display: flex;
-        flex: 3;
-        display: none;
-    }
+  
 }
+
+    .dropdown {
+        flex: 3;
+        background-color:#8C93D5;
+        height: 5vh;
+        border-radius: 5px;
+     
+    }
+
+    .title {
+        font-size: 10pt;
+        flex: 2;
+  
+    }
