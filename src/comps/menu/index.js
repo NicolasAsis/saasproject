@@ -18,11 +18,11 @@ function Menu({items, menuTitle, children, dropdown}){
     }
 
     return (
-        <div className="menu" onClick={()=>{
+        <div 
+        className="menu" 
+        onClick={()=>{
             setDrop(!drop)
-        }}
-        className="menu"
-        >
+        }}>
         <h1>
             <FiMenu className="icon_style" />
             {menuTitle}

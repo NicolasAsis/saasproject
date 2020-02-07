@@ -1,0 +1,35 @@
+@import './itemInfo/itemInfo.scss';
+
+
+@mixin flex($dir:row){
+    display:flex;
+    flex-direction:$dir;
+}
+
+.itemCont {
+    background-color:#FFFFFF;
+    height:75px;
+    border: 3px solid #F1F1F1;
+    @include flex();
+    align-items:center;
+    font-family: 'Roboto', sans-serif;
+    overflow:hidden;
+    transition:height 0.4s;
+
+    .itemInfo {
+        flex:1;
+        text-align:center;
+        margin:5px;
+        font-size:18px;
+        color:#444B95;
+    }
+
+    .moreIcon_style {
+        height:100px;
+    }
+
+}
+
+.itemCont_active {
+    height:200px;
+}

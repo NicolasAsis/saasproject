@@ -1,0 +1,54 @@
+@import "./statusItem/statusItem.scss";
+
+@mixin flex($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+}
+
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  width: 157px;
+
+  .statusCont {
+    background-color: #deefdb;
+    height: 23px;
+    width: 157px;
+    border-radius: 78px;
+    @include flex();
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size:13px;
+  }
+
+  .statusSubCont {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #53a43e;
+  }
+
+  .statusCircle {
+    width: 13px;
+    height: 13px;
+    background-color: #53a43e;
+    border-radius: 100px;
+  }
+
+  .statusText {
+    color: #53a43e;
+    font-size: 13pt;
+  }
+
+  .dropmenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+
+  .dropmenu_active {
+    max-height: 100vh;
+  }
+}
+

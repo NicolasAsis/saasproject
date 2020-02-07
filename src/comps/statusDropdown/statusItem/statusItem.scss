@@ -1,0 +1,46 @@
+@mixin flex($dir:row){
+    display:flex;
+    flex-direction:$dir;
+}
+
+.statusItem {
+    background-color:#deefdb;
+    border-radius:78px;
+    height:23px;
+    @include flex();
+    align-items:center;
+    font-family: 'Roboto', sans-serif;
+    padding: 1px;
+    margin: 10px 0;
+    font-size:13px;
+
+    &:first-of-type {
+        margin-top:10px;
+
+    }
+
+    .itemCont {
+        flex:1;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color:#53A43E;
+        height:100%;
+        margin:0;
+        padding:0px;
+        border:none;
+        background-color:transparent;
+    }
+
+    .itemCircle {
+        width:13px;
+        height:13px;
+        background-color:#53A43E;
+        border-radius:100px;
+    }
+
+    .itemText {
+        color:#53A43E;
+        font-size:13pt;
+    }
+}
