@@ -1,7 +1,7 @@
 @mixin flex(){
     flex:1;
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content:center;
     align-items:center;
 }
@@ -15,8 +15,8 @@
 }
 
 .popupCont {
-    width:663px;
-    height:316px;
+    width:50vw;
+    height:65vh;
     border: 3px solid #8C93D5;
     border-radius:10px;
     display:flex;
