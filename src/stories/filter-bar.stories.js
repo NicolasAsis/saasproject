@@ -2,7 +2,7 @@ import FilterBar from '../comps/filter-bar'
 import React from 'react'
 import '../App.scss';
 import Dropdown from '../comps/dropdowns';
-import Menu from '../comps/menu';
+
 
 
 
