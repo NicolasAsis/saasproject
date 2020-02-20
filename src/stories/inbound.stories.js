@@ -6,7 +6,7 @@ import '../App.scss';
 
 export default {
     title: "Inbound",
-    Component: "Inbound"
+    Component:Inbound
 }
 
 export const DefaultInbound = () => {

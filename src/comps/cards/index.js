@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import FilterBar from '../filter-bar';
 
 
+
 function Card({ }){
     const [inbound, setInbound] = useState(1)
     const [outbound, setOutBound] = useState(0)
@@ -48,7 +49,7 @@ function Card({ }){
             </div>
         
             <div className="body">
-                <FilterBar />
+        
                 <div className="item-section">
                     <div className="item_details">
                         <div className="detail_heading">Date</div>

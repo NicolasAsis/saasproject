@@ -36,7 +36,7 @@ function Dropdown({items, title, menuTitle, children, dropdown}){
                 {children}
                 <div id="item_container" className={cn}>
                     {items.map((o,i) => {
-                        return <DdItem {...o}/> 
+                        return <DdItem key={i} {...o}/> 
                     })}
                 </div>
             </div>

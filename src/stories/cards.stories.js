@@ -6,7 +6,7 @@ import '../App.scss';
 
 export default {
     title: "Cards",
-    Component: "Card"
+    Component:Card
 }
 
 export const DefaultCard = () => {

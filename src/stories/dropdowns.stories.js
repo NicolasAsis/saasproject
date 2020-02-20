@@ -6,7 +6,7 @@ import '../App.scss';
 
 export default {
     title: "Dropdowns",
-    Component: "Dropdown"
+    Component:Dropdown
 }
 
 
@@ -31,28 +31,14 @@ var items = [
 ]
 
 
-export const monthDropdown = () => {
+export const DefualtDropdown = () => {
     return  <Dropdown
-            title='Month'
-            itemTitle="Month"
+            title='default'
+            itemTitle="default"
             items={items}
             dropdown={true} 
         />
 }
     
-export const brandDropdown = () => {
-    return  <Dropdown
-            items={items}
-            dropdown={true} 
-            title="Brand"
-            itemTitle="" />
-}
-    
-export const modelDropdown = () => {
-    return  <Dropdown
-            items={items}
-            dropdown={true} 
-            title="Model"
-            itemTitle="" />
-}
+
     
