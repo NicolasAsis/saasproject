@@ -1,4 +1,8 @@
 
+
+body {
+    font-family: 'Roboto', sans-serif;
+
 .bar {
     display: flex;
     flex: 0.4;
@@ -34,7 +38,7 @@
 .Slider-category-Titles {
    padding: 20px;
     color: rgb(69, 84, 218);
-    font-size: 20pt;
+    font-size: 17pt;
 }
 .Slider-category-Titles-active {
     background-color: rgba(69, 84, 218, 0.201);
@@ -122,4 +126,5 @@
 
 .space-above {
     flex: 2;
+}
 }
