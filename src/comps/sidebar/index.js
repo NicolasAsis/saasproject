@@ -25,26 +25,32 @@ const StatSVG = () => (
 
 var cnSlider = "year_slider";
 
+var cnYear_Heading = "year-heading";
 
 
 function Sidebar(){
 
+    const [year, setYear] = useState(0)
     const [inventory, setInventory] = useState(0)
-    const [dashboard, setDashboard] = useState(true)
+    const [dashboard, setDashboard] = useState(0)
     
 // #1 Makes Tab color change on click
     var cnOne = "inventory-text";
     var cnTwo = "dashboard-text";
 
+    if ( year === 1){
+        cnYear_Heading = "year-heading year-heading_active"
+    } else if ( year === 0 ) {
+        cnYear_Heading = "year-heading"
+    }
+
+
     if ( inventory === 1 ){
         cnOne = "inventory-text inventory-text:active";
-        
         cnSlider = "year_slider-inactive"
-
     } else if ( inventory === 0 ) {
         cnOne = "inventory-text inventory-text-inactive"
         cnSlider = "year_slider";
-    
     }
 
     if ( dashboard === 1 ){
@@ -91,23 +97,23 @@ function Sidebar(){
              </div>
 
              <div className={cnSlider}>
-                 <div className="year-heading">
-                   <h3>2014</h3> 
+                <div style={{display:"flex", flexDirection:"column", flex:1}}>
+                    <h1>Hello</h1>
+                    <div onClick={()=>{
+                        setYear(1)
+                       }}className={cnYear_Heading}>2014 </div>
+                   
                 </div>
-                 <div className="year-heading">
-                   <h3>2015</h3> 
+                <div style={{display:"flex", flexDirection:"column", flex:1}}>
+                <h1>Hello</h1>
+                    <div className={cnYear_Heading}>2014 </div>
+                    <div className={cnYear_Heading}>2015 </div>
+                    <div className={cnYear_Heading}>2016 </div>
+                    <div className={cnYear_Heading}>2017 </div>
+                    <div className={cnYear_Heading}>2018 </div>
                 </div>
-                 <div className="year-heading">
-                   <h3>2016</h3> 
-                </div>
-                 <div className="year-heading">
-                   <h3>2017</h3> 
-                </div>
-                 <div className="year-heading">
-                   <h3>2018</h3> 
-                </div>
-             
-             
+
+
              </div>
         </div>
           )

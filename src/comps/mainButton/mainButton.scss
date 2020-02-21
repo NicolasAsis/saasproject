@@ -1,0 +1,19 @@
+
+.butCont {
+    // width:125px;
+    height:50px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    background-color:#8C93D5;
+    border-radius:3px;
+    margin:5px;
+    padding:5px;
+
+    .butText {
+        font-family:Roboto;
+        font-size:18px;
+        line-height:21px;
+        color:#FFFFFF;
+    }
+}

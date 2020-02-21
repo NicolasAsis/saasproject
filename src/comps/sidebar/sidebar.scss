@@ -18,8 +18,14 @@
 
 .year-heading {
     flex: 1;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.year-heading_active {
+   background-color: rgba(65, 51, 153, 0.379);
+}
+
 
 
 .year-heading-active {
