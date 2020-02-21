@@ -10,9 +10,9 @@ const InvSVG = () => (
 <path d="M16.5133 19.6733L27 24.9167L37.4866 19.6733" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M27 37.6565V24.9165" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M21.5833 16.7915L32.4166 22.2082" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
 </svg>
 )
+
 const StatSVG = () => (
 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8333 17.25H29.1666V36.75H24.8333V17.25Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -21,7 +21,9 @@ const StatSVG = () => (
 </svg>
 )
 
-// sVG END 
+// SVG END 
+
+var cnSlider = "year_slider";
 
 
 
@@ -36,9 +38,15 @@ function Sidebar(){
 
     if ( inventory === 1 ){
         cnOne = "inventory-text inventory-text:active";
+        
+        cnSlider = "year_slider-inactive"
+
     } else if ( inventory === 0 ) {
         cnOne = "inventory-text inventory-text-inactive"
+        cnSlider = "year_slider";
+    
     }
+
     if ( dashboard === 1 ){
         cnTwo = "dashboard-text dashboard-text:active";
     } else if ( dashboard === 0 ) {
@@ -48,7 +56,9 @@ function Sidebar(){
 
     return (
 
-            <div class="bar">
+        <div className="container">
+
+            <div className="bar">
                 {/* Space Below */}
                 <div className="space-above"></div>
                 {/* Space End */}
@@ -77,8 +87,29 @@ function Sidebar(){
                 <div className="space"></div>
                 <div className="space"></div>
                 {/* Space End */}
+             
+             </div>
 
-            </div>
+             <div className={cnSlider}>
+                 <div className="year-heading">
+                   <h3>2014</h3> 
+                </div>
+                 <div className="year-heading">
+                   <h3>2015</h3> 
+                </div>
+                 <div className="year-heading">
+                   <h3>2016</h3> 
+                </div>
+                 <div className="year-heading">
+                   <h3>2017</h3> 
+                </div>
+                 <div className="year-heading">
+                   <h3>2018</h3> 
+                </div>
+             
+             
+             </div>
+        </div>
           )
 
 

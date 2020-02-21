@@ -1,13 +1,45 @@
 
 .bar {
     display: flex;
-    flex: 1;
+    flex: 0.4;
     height: 100vh;
     flex-direction: column;
     background-color: white;
     align-content: center;
     justify-items: center;
+}
 
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 50vw;
+}
+
+.year-heading {
+    flex: 1;
+    text-align: center;
+}
+
+
+.year-heading-active {
+    background-color: #8C93D5;
+  
+}
+
+.year_slider {
+    display: flex;
+    width: 20vw;
+    background-color: rgba(0, 0, 255, 0.263);
+    height: 100vh;
+    flex-direction: column;
+    
+}
+
+.year_slider-inactive{
+    flex: 0;
+    height: 100vh;
+    display: none;
 }
 
 .logo {
@@ -22,7 +54,6 @@
     font-size: 20pt;
     text-align: center;
     flex: 1;
-    width: 8.4%;
     border-radius: 100px;
     background-color: #8C93D5;
     align-self: center;
@@ -32,7 +63,6 @@
     flex: 1;
     font-size: 20pt;
     text-align: center;
-    width: 8.2%;
     border-radius: 100px;
     background-color: #8C93D5;
     align-self: center;
