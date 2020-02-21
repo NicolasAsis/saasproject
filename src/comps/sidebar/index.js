@@ -20,6 +20,14 @@ const StatSVG = () => (
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1667 28.0835H20.5V36.7502H16.1667V28.0835Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 )
+
+const UserSVG = () => (
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="22" cy="22" r="22" fill="#444B95"/>
+</svg>
+
+)
+
 // SVG END 
 
 
@@ -104,21 +112,21 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
 
     // slider below
     var cnSlider = "year_slider";
-    var cnOne = "inventory-text";
-    var cnTwo = "dashboard-text";
+    var cnOne = "inventory-icon";
+    var cnTwo = "dashboard-icon";
 
     if ( inventory === 1 ){
-        cnOne = "inventory-text inventory-text:active";
+        cnOne = "inventory-icon inventory-icon:active";
         cnSlider = "year_slider-inactive"
     } else if ( inventory === 0 ) {
-        cnOne = "inventory-text inventory-text-inactive"
+        cnOne = "inventory-icon inventory-icon-inactive"
         cnSlider = "year_slider";
     }
 
     if ( dashboard === 1 ){
-        cnTwo = "dashboard-text dashboard-text:active";
+        cnTwo = "dashboard-icon dashboard-icon:active";
     } else if ( dashboard === 0 ) {
-        cnTwo = "dashboard-text dashboard-text-inactive"
+        cnTwo = "dashboard-icon dashboard-icon-inactive"
     }
 //  end
 
@@ -155,6 +163,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                 <div className="space"></div>
                 <div className="space"></div>
                 {/* Space End */}
+
+                <div className="userIcon">
+                        <UserSVG />
+                    </div>
              </div>
 
 

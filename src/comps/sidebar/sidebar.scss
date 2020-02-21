@@ -75,48 +75,44 @@ body {
     display: none;
 }
 
-.logo {
-    width: 20vw;
-    border-radius: 200px;
+.userIcon {
     align-self: center;
     flex: 3;
-    background-color: red;
+    
+
 }
 
-.inventory-text {
-    font-size: 20pt;
-    text-align: center;
+.inventory-icon {
     flex: 1;
-    border-radius: 100px;
+    margin: 10px;
+    border-radius: 140px;
     background-color: #8C93D5;
     align-self: center;
 }
 
-.dashboard-text {
+.dashboard-icon {
     flex: 1;
-    font-size: 20pt;
-    text-align: center;
-    border-radius: 100px;
+    margin: 10px;
+    border-radius: 140px;
     background-color: #8C93D5;
     align-self: center;
-    align-items: center;
-    justify-content: center;
+  
 }
 
-.dashboard-text:active {
+.dashboard-icon:active {
     background-color: #8C93D5 ;
 }
 
-.inventory-text:active {
+.inventory-icon:active {
     background-color: #8C93D5; 
 }
 
-.dashboard-text-inactive {
+.dashboard-icon-inactive {
     
     background-color: white;
 }
 
-.inventory-text-inactive {
+.inventory-icon-inactive {
     background-color: white;
 }
 
