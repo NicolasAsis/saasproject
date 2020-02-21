@@ -20,30 +20,92 @@ const StatSVG = () => (
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1667 28.0835H20.5V36.7502H16.1667V28.0835Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 )
-
 // SVG END 
 
-var cnSlider = "year_slider";
 
-var cnYear_Heading = "year-heading";
+var cnInboundHeadingOne = "year-heading";
+var cnInboundHeadingTwo = "year-heading";
+var cnInboundHeadingThree = "year-heading";
+var cnOutboundHeadingOne = "year-heading";
+var cnOutboundHeadingTwo = "year-heading";
+var cnOutboundHeadingThree = "year-heading";
+var cnCategoryHeadingOne = "Slider-category-Titles";
+var cnCategoryHeadingTwo = "Slider-category-Titles";
 
 
-function Sidebar(){
+function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree}){
 
-    const [year, setYear] = useState(0)
+    const [inboud_year_one, setInboud_Year_One] = useState(0)
+    const [inboud_year_two, setInboud_Year_Two] = useState(0)
+    const [inboud_year_three, setInboud_Year_Three] = useState(0)
+    const [outbound_year_one, setOutbound_Year_One] = useState(0)
+    const [outbound_year_two, setOutbound_Year_Two] = useState(0)
+    const [outbound_year_three, setOutbound_Year_Three] = useState(0)
+    const [category_one, setCategory_One] = useState(0)
+    const [category_two, setCategory_Two] = useState(0)
     const [inventory, setInventory] = useState(0)
     const [dashboard, setDashboard] = useState(0)
     
 // #1 Makes Tab color change on click
+
+// INBOUND OR OUT BOUND ACTIVE INACTIVE BELOW
+    if ( category_one === 1){
+        cnCategoryHeadingOne = "Slider-category-Titles Slider-category-Titles-active"
+    } else if ( category_one === 0 ) {
+        cnCategoryHeadingOne = "Slider-category-Titles"
+    }
+    
+    if ( category_two === 1){
+        cnCategoryHeadingTwo = "Slider-category-Titles Slider-category-Titles-active"
+    } else if ( category_two === 0 ) {
+        cnCategoryHeadingTwo = "Slider-category-Titles"
+    }
+    // End
+
+    // Color change on selected year for Inbound Below
+    
+    if ( inboud_year_one === 1){
+        cnInboundHeadingOne = "year-heading year-heading_active"
+    } else if ( inboud_year_one === 0 ) {
+        cnInboundHeadingOne = "year-heading"
+    }
+    if ( inboud_year_two === 1){
+        cnInboundHeadingTwo = "year-heading year-heading_active"
+    } else if ( inboud_year_two === 0 ) {
+        cnInboundHeadingTwo = "year-heading"
+
+    }
+    if ( inboud_year_three === 1){
+        cnInboundHeadingThree = "year-heading year-heading_active"
+    } else if ( inboud_year_three === 0 ) {
+        cnInboundHeadingThree = "year-heading"
+    }
+    // End
+
+    // Color change on selected year for Outbound Below
+    
+    if ( outbound_year_one === 1){
+        cnOutboundHeadingOne = "year-heading year-heading_active"
+    } else if ( outbound_year_one === 0 ) {
+        cnOutboundHeadingOne = "year-heading"
+    }
+    if ( outbound_year_two === 1){
+        cnOutboundHeadingTwo = "year-heading year-heading_active"
+    } else if ( outbound_year_two === 0 ) {
+        cnOutboundHeadingTwo = "year-heading"
+
+    }
+    if ( outbound_year_three === 1){
+        cnOutboundHeadingThree = "year-heading year-heading_active"
+    } else if ( inboud_year_three === 0 ) {
+        cnOutboundHeadingThree = "year-heading"
+    }
+    // End
+
+    // slider below
+    var cnSlider = "year_slider";
     var cnOne = "inventory-text";
     var cnTwo = "dashboard-text";
-
-    if ( year === 1){
-        cnYear_Heading = "year-heading year-heading_active"
-    } else if ( year === 0 ) {
-        cnYear_Heading = "year-heading"
-    }
-
 
     if ( inventory === 1 ){
         cnOne = "inventory-text inventory-text:active";
@@ -93,27 +155,79 @@ function Sidebar(){
                 <div className="space"></div>
                 <div className="space"></div>
                 {/* Space End */}
-             
              </div>
 
+
+                {/* Inbound below */}
              <div className={cnSlider}>
                 <div style={{display:"flex", flexDirection:"column", flex:1}}>
-                    <h1>Hello</h1>
+                    <h1 className="SliderPageHeading">Inventory</h1>
+                    <div className={cnCategoryHeadingOne} 
+                        onClick={()=>{
+                        setCategory_One(1)
+                        setCategory_Two(0)
+                  
+                    }}>{TitleOne}
+                    </div>
                     <div onClick={()=>{
-                        setYear(1)
-                       }}className={cnYear_Heading}>2014 </div>
-                   
+                        setInboud_Year_One(1)
+                        setInboud_Year_Two(0)
+                        setInboud_Year_Three(0)
+                        setCategory_One(1)
+                        setCategory_Two(0)
+                       }}className={cnInboundHeadingOne}>{InboundYearOne}
+                    </div>
+                    <div onClick={()=>{
+                        setInboud_Year_Two(1)
+                        setInboud_Year_One(0)
+                        setInboud_Year_Three(0)
+                        setCategory_One(1)
+                        setCategory_Two(0)
+                       }}className={cnInboundHeadingTwo}>{InboundYearTwo}
+                    </div>
+                    <div onClick={()=>{
+                        setInboud_Year_Three(1)
+                        setInboud_Year_Two(0)
+                        setInboud_Year_One(0)
+                        setCategory_One(1)
+                        setCategory_Two(0)
+                       }}className={cnInboundHeadingThree}>{InboundYearThree}                 
+                     </div>
                 </div> 
+
+                {/* Outbound Below */}
                 <div style={{display:"flex", flexDirection:"column", flex:1}}>
-                <h1>Hello</h1>
-                    <div className={cnYear_Heading}>2014 </div>
-                    <div className={cnYear_Heading}>2015 </div>
-                    <div className={cnYear_Heading}>2016 </div>
-                    <div className={cnYear_Heading}>2017 </div>
-                    <div className={cnYear_Heading}>2018 </div>
+                <div className={cnCategoryHeadingTwo} 
+                        onClick={()=>{
+                        setCategory_Two(1)
+                        setCategory_One(0)
+                    }}>{TitleTwo}
+                    </div>
+                    <div onClick={()=>{
+                        setOutbound_Year_One(1)
+                        setOutbound_Year_Two(0)
+                        setOutbound_Year_Three(0)
+                        setCategory_One(0)
+                        setCategory_Two(1)
+                       }}className={cnOutboundHeadingOne}>{OutboundYearOne}
+                    </div>
+                    <div onClick={()=>{
+                        setOutbound_Year_Two(1)
+                        setOutbound_Year_One(0)
+                        setOutbound_Year_Three(0)
+                        setCategory_One(0)
+                        setCategory_Two(1)
+                       }}className={cnOutboundHeadingTwo}>{OutboundYearTwo}
+                    </div>
+                    <div onClick={()=>{
+                        setOutbound_Year_Three(1)
+                        setOutbound_Year_Two(0)
+                        setOutbound_Year_One(0)
+                        setCategory_One(0)
+                        setCategory_Two(1)
+                       }}className={cnOutboundHeadingThree}>{OutboundYearThree}
+                    </div>    
                 </div>
-
-
              </div>
         </div>
           )
@@ -121,6 +235,15 @@ function Sidebar(){
 
 }
 Sidebar.defaultProps = {
+    TitleOne: "Inbound",
+    TitleTwo: "Outbound",
+    OutboundYearOne: "2018",
+    OutboundYearTwo: "2019",
+    OutboundYearThree: "2020",
+    InboundYearOne: "2018",
+    InboundYearTwo: "2019",
+    InboundYearThree: "2020",
+
    
 }
 
