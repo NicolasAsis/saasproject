@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, {useState} from 'react';
-=======
-import React, { useState } from "react";
 
->>>>>>> 26185b90ace95e6b589a8456eb364fa992f7b498
+import React, { useState } from "react";
 import { IoIosClose } from "react-icons/io";
 
 import MainButton from "../mainButton";
