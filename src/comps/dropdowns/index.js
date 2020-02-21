@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import DdItem from './dropdown-Items';
 
-import { FiMenu } from 'react-icons/fi';
+import { IoIosArrowDown } from 'react-icons/io';
 
 
 function Dropdown({items, title, menuTitle, children, dropdown}){
@@ -28,7 +28,7 @@ function Dropdown({items, title, menuTitle, children, dropdown}){
             <div className="icon_holder">
                 <div className="icon_holder_space"></div>
                 <div className="icon_style">
-                <FiMenu />
+                <IoIosArrowDown />
                 </div>
             
             </div>

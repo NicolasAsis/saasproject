@@ -1,5 +1,5 @@
 
-$fs:20px;
+$fs:10pt;
 $m:10px;
 
 
@@ -8,6 +8,7 @@ $m:10px;
     padding: 10px;
     margin: $m 0;
     font-size: $fs;
+    font-family: 'Roboto', sans-serif;
   
 
     &:active, &:hover {
@@ -25,4 +26,5 @@ $m:10px;
 .dd_items_active {
     background-color:#000;
     color: white;
+    font-family: 'Roboto', sans-serif;
 }

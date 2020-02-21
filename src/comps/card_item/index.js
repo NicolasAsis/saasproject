@@ -12,18 +12,28 @@ import StatusDropdown from '../statusDropdown';
 function CardItem({moreInfo}){
 
     const [drop,setDrop] = useState(false);
+    const [active,setActive] = useState(false);
 
     var classN = "itemCont";
 
     var moreDet = <FiMoreVertical className='moreIcon_style' onClick={()=>{setDrop(!drop);}}/>;
 
     if(drop){
-        classN="itemCont itemCont_active"
+        classN="itemCont itemCont_active";
         moreDet = <FiMoreHorizontal className='moreIcon_style' onClick={()=>{setDrop(!drop);}}/>;
+    }
+    else if(active) {
+        classN="itemCont itemContSelect";
     }
    
     return (
-        <div className={classN}>
+        <div 
+        className={classN} 
+        onClick={()=>{
+            setActive(!active);
+        }}>
+            <ItemInfo infoText="Jan 25"/>
+            <ItemInfo />
             <ItemInfo />
             <ItemInfo />
             <ItemInfo />

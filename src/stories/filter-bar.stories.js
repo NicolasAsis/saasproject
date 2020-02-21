@@ -12,24 +12,39 @@ export default {
     Component:FilterBar
 }
     
-var items = [
+var Monthitems = [
     {
-        itemTitle:'Profile',
+        itemTitle:'January',
         onClick:()=>{alert("go to profile")}
     },
     {
-        itemTitle:'Settings',
+        itemTitle:'Feburary',
         onClick:()=>{alert("go to Settings")}
     },
     {
-        itemTitle:'DashBoard',
-        active:true
+        itemTitle:'March',
+        onClick:()=>{alert("go to Settings")}
+       
     },
 
     {
-        itemTitle:'Stats',
+        itemTitle:'April',
         onClick:()=>{alert("go to Stats")}
     }
+]
+var Modelitems = [
+    {
+        itemTitle:'A010493B',
+        onClick:()=>{alert("go to profile")}
+    },
+    {
+        itemTitle:'ALW402B',
+        onClick:()=>{alert("go to Settings")}
+    },
+    {
+        itemTitle:'BU209DO',
+        onClick:()=>{alert("go to Stats")}
+    },
 ]
 
 
@@ -40,26 +55,20 @@ export const DefaultFilter = () => {
         <div style={{flex:1, display:"flex", flexDirection:"row"}}>
 
             <Dropdown 
-            items={items}
+            items={Monthitems}
             dropdown={true}
             title="month"
             key={0}
             />
 
             <Dropdown 
-            items={items}
+            items={Modelitems}
             dropdown={true}
             title="model"
             key={1}
             />
 
-            <Dropdown 
-            items={items}
-            dropdown={true}
-            title="year"
-            key={2}
-            />
-
+      
             <FilterBar />
 
         </div>

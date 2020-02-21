@@ -4,7 +4,10 @@
     flex: 1;
     height: 100vh;
     flex-direction: column;
-    background-color: #8C93D5;
+    background-color: white;
+    align-content: center;
+    justify-items: center;
+
 }
 
 .logo {
@@ -19,8 +22,9 @@
     font-size: 20pt;
     text-align: center;
     flex: 1;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.537);
+    width: 8.4%;
+    border-radius: 100px;
+    background-color: #8C93D5;
     align-self: center;
 }
 
@@ -28,32 +32,35 @@
     flex: 1;
     font-size: 20pt;
     text-align: center;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.489);
+    width: 8.2%;
+    border-radius: 100px;
+    background-color: #8C93D5;
     align-self: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .dashboard-text:active {
-    background-color: rgba(245, 245, 245, 0.468);
+    background-color: #8C93D5 ;
 }
 
 .inventory-text:active {
-    background-color: rgba(245, 245, 245, 0.468); 
+    background-color: #8C93D5; 
 }
 
 .dashboard-text-inactive {
     
-    background-color: #8C93D5;
+    background-color: white;
 }
 
 .inventory-text-inactive {
-    background-color: #8C93D5;
+    background-color: white;
 }
 
 .space {
-    flex: 3;
+    flex: 2;
 }
 
 .space-above {
-    flex: 0.5;
+    flex: 2;
 }

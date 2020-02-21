@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaAngleRight } from 'react-icons/fa';
+import { GoPrimitiveDot} from 'react-icons/io';
 
 function DdItem({itemTitle, onClick, active}){
 
@@ -11,7 +11,7 @@ function DdItem({itemTitle, onClick, active}){
 
     return (
         <div onClick={onClick} className={cn}>
-           <FaAngleRight /> {itemTitle}
+         {itemTitle}
         </div>
     )
 }

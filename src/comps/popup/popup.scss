@@ -1,0 +1,69 @@
+@mixin flex(){
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+@mixin flex2(){
+    flex:1;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.popupCont {
+    width:663px;
+    height:316px;
+    border: 3px solid #8C93D5;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    // justify-content:center;
+    // align-items:center;
+
+    .popupTopRow {
+        @include flex2();
+        // background-color:green;
+        margin:5px;
+        padding-right:2%;
+
+        .closeBut {
+            width:49px;
+            height:49px;
+            background-color:#DFE0F0;
+            border-radius:50px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            .xIcon {
+                width:90%;
+                height:90%;
+                color:#444B95;
+            }
+        }
+    }
+
+    .popupRow {
+        @include flex();
+        // background-color:green;
+        margin:5px;
+
+        .popupTitle {
+            font-family: Roboto;
+            font-size:29pt;
+            font-weight:500;
+            line-height:34px;
+            color:#444B95;
+        }
+
+    }
+
+}
+
+.popup_close {
+    display:none;
+}

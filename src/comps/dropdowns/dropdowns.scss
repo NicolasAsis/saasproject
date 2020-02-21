@@ -17,14 +17,18 @@ $w:50px;
     flex-direction: row;
     flex: 1;
     height: 80%;
+
 }
 
 
 .dd_title {
-    flex: 1;
+    color: #888FD3;
+    flex: 0.5;
     font-size: 13pt;
     margin: 0px;
-    text-align: right;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
 
  
     
@@ -39,16 +43,17 @@ $w:50px;
     display: flex;
     margin-left: 1vw;
     margin-right: 1vw;
-    align-content: center;
-    justify-content: center;
- 
-    border-radius: 40px;
+  
+    border-radius: 5px;
     @include flex();
 
 
         .icon_style {
             width: $w;
             flex: 1;
+            margin: 2px;
+
+     
         }
 
         .icon_holder {

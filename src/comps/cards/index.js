@@ -53,10 +53,12 @@ function Card({ }){
                 <div className="item-section">
                     <div className="item_details">
                         <div className="detail_heading">Date</div>
-                        <div className="detail_heading">Model</div>
-                        <div className="detail_heading">Serial #</div>
-                        <div className="detail_heading">Person</div>
-                        <div className="detail_heading">Customer</div>
+                        <div className="detail_heading">TiD</div>
+                        <div className="detail_heading">Model#</div>
+                        <div className="detail_heading">Serial#</div>
+                        <div className="detail_heading">MiD#</div>
+                        <div className="detail_heading">Merchant</div>
+                        <div className="detail_heading">Seller</div>
                         <div className="detail_heading">Status</div>
                     </div>
                     <p className="item">item aray map goes here</p>
