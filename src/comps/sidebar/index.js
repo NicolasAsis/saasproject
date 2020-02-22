@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 
 
 // SVG BELOW
-
 const InvSVG = () => (
 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M27.9642 14.5706L36.6308 18.9039C37.3671 19.2698 37.8329 20.0209 37.8333 20.8431V31.1673C37.8329 31.9894 37.3671 32.7405 36.6308 33.1064L27.9642 37.4398C27.3539 37.7452 26.6353 37.7452 26.025 37.4398L17.3583 33.1064C16.6228 32.7358 16.1609 31.9801 16.1667 31.1564V20.8431C16.1671 20.0209 16.6329 19.2698 17.3692 18.9039L26.0358 14.5706C26.6432 14.2688 27.3568 14.2688 27.9642 14.5706Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -27,8 +26,7 @@ const UserSVG = () => (
 </svg>
 
 )
-
-// SVG END 
+// SVG END ^
 
 
 var cnInboundHeadingOne = "year-heading";
@@ -54,7 +52,7 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
     const [inventory, setInventory] = useState(0)
     const [dashboard, setDashboard] = useState(0)
     
-// #1 Makes Tab color change on click
+
 
 // INBOUND OR OUT BOUND ACTIVE INACTIVE BELOW
     if ( category_one === 1){
@@ -206,7 +204,6 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                        }}className={cnInboundHeadingThree}>{InboundYearThree}                 
                      </div>
                 </div> 
-
                 {/* Outbound Below */}
                 <div style={{display:"flex", flexDirection:"column", flex:1}}>
                 <div className={cnCategoryHeadingTwo} 
