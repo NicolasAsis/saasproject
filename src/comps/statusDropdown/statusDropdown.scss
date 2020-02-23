@@ -11,14 +11,16 @@
   width: 157px;
 
   .statusCont {
-    background-color: #deefdb;
-    height: 23px;
-    width: 157px;
-    border-radius: 78px;
+    background-color:#FFFFFF;
+    height: 25px;
+    width: 100px;
+    border-radius: 3px;
     @include flex();
     align-items: center;
     font-family: "Roboto", sans-serif;
     font-size:13px;
+    border: 1px solid #DFE0F0;
+    cursor: pointer;
   }
 
   .statusSubCont {
@@ -26,13 +28,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #53a43e;
+    // color: #53a43e;
+    // background-color:"blue";
+    
   }
 
   .statusCircle {
-    width: 13px;
-    height: 13px;
-    background-color: #53a43e;
+    width: 6px;
+    height: 6px;
+    // background-color: #53a43e;
     border-radius: 100px;
   }
 

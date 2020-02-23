@@ -4,7 +4,7 @@ import { IoIosClose } from "react-icons/io";
 
 import MainButton from "../mainButton";
 
-function Popup({ defaultTitle, buttons, items }) {
+function Popup({ defaultTitle, addBut, items }) {
   const [close, setClose] = useState(false);
 
   var cn = "popupCont";
@@ -29,9 +29,7 @@ function Popup({ defaultTitle, buttons, items }) {
         <p className="popupTitle">{defaultTitle}</p>
       </div>
       <div className="popupRow">
-        {items.map((o, i) => {
-          return <MainButton {...o} />;
-        })}
+            {addBut&&items.map((o, i) => {return <MainButton width="18%" {...o} />; })}   
       </div>
     </div>
   );
@@ -39,7 +37,7 @@ function Popup({ defaultTitle, buttons, items }) {
 
 Popup.defaultProps = {
   defaultTitle: "Default Title",
-  buttons: false,
+  addBut: false,
   items: [
     {
       defaultText: "Yes"
