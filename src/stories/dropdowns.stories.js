@@ -12,20 +12,15 @@ export default {
 
 var items = [
     {
-        itemTitle:'Profile',
+        itemTitle:'default',
         onClick:()=>{alert("go to profile")}
     },
     {
-        itemTitle:'Settings',
+        itemTitle:'default',
         onClick:()=>{alert("go to Settings")}
     },
     {
-        itemTitle:'DashBoard',
-        active:true
-    },
-
-    {
-        itemTitle:'Stats',
+        itemTitle:'default',
         onClick:()=>{alert("go to Stats")}
     }
 ]
@@ -37,6 +32,7 @@ export const DefualtDropdown = () => {
             itemTitle="default"
             items={items}
             dropdown={true} 
+            children={true}
         />
 }
     

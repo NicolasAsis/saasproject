@@ -1,11 +1,18 @@
 
 import React, {useState} from 'react';
 import DdItem from './dropdown-Items';
-
 import { IoIosArrowDown } from 'react-icons/io';
 
 
-function Dropdown({items, title, menuTitle, children, dropdown}){
+
+function Dropdown({items, title, ddTitle, children, dropdown, ddwidth}){
+    // import scss width atribute
+
+    // End ^
+
+ 
+
+
 
     const [drop, setDrop] = useState(false)
     var cn = "dropmenu"
@@ -23,9 +30,11 @@ function Dropdown({items, title, menuTitle, children, dropdown}){
            <p className="dd_title">{title}</p>
             <div className="dropdown" onClick={()=>{
                 setDrop(!drop)
+         
             }}>   
             
             <div className="icon_holder">
+                {ddTitle}
                 <div className="icon_holder_space"></div>
                 <div className="icon_style">
                 <IoIosArrowDown />
@@ -45,59 +54,16 @@ function Dropdown({items, title, menuTitle, children, dropdown}){
 }
 
 Dropdown.defaultProps = {
-  
-    items:[{
-        itemTitle:"one"
-    }, {
-        itemTitle:"two"
-    }],
     menuTitle: "Default Title",
     title:"",
     children: null,
-    dropdown:false
+    dropdown:false,
+    // new installation below
+    ddTitle: "default",
+    ddwidth: 1
 };
 
 
 
 export default Dropdown;
 
-
-// import React, {useState} from 'react';
-// import DdItems from '../dropdowns/dropdown-Items';
-
-// import './dropdowns.scss'
-
-
-
-// function Dropdown({title, items}){
-
-    
-    
-//     return (
-
-//         <div className="dropdown-body">
-//             <p className="title">
-//                 {title}
-//             </p>
-//             <div className="dropdown" onClick=""></div>
-
-//             </div>
-//           )
-
-
-// }
-
-// Dropdown.defaultProps = {
-//     items:[{
-//         itemTitle:"one"
-//     }, {
-//         itemTitle:"two"
-//     }],
-//     menuTitle: "Default Title",
-//     dropdown:false
-  
-// }
-
-
-
-// export default Dropdown;

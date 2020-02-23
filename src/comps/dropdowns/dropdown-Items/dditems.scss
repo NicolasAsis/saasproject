@@ -4,16 +4,16 @@ $m:10px;
 
 
 .dd_items {
-    background-color: rgb(255, 114, 6);
+   color: rgb(134, 134, 134);
     padding: 10px;
     margin: $m 0;
     font-size: $fs;
     font-family: 'Roboto', sans-serif;
-  
+    text-align: center;
 
     &:active, &:hover {
-        background-color: rgb(197, 252, 119);
-    }
+        color: rgb(98, 32, 231);
+    } 
     &:first-of-type {
         margin-top: $m*2;
     }

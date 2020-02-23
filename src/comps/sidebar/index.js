@@ -50,7 +50,7 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
     const [category_one, setCategory_One] = useState(0)
     const [category_two, setCategory_Two] = useState(0)
     const [inventory, setInventory] = useState(0)
-    const [dashboard, setDashboard] = useState(0)
+    const [dashboard, setDashboard] = useState(1)
     
 
 
@@ -218,6 +218,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setOutbound_Year_Three(0)
                         setCategory_One(0)
                         setCategory_Two(1)
+                           // Inbound off
+                           setInboud_Year_Two(0)
+                           setInboud_Year_One(0)
+                           setInboud_Year_Three(0)
                        }}className={cnOutboundHeadingOne}>{OutboundYearOne}
                     </div>
                     <div onClick={()=>{
@@ -226,6 +230,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setOutbound_Year_Three(0)
                         setCategory_One(0)
                         setCategory_Two(1)
+                           // Inbound off
+                           setInboud_Year_Two(0)
+                           setInboud_Year_One(0)
+                           setInboud_Year_Three(0)
                        }}className={cnOutboundHeadingTwo}>{OutboundYearTwo}
                     </div>
                     <div onClick={()=>{
@@ -234,6 +242,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setOutbound_Year_One(0)
                         setCategory_One(0)
                         setCategory_Two(1)
+                           // Inbound off
+                           setInboud_Year_Two(0)
+                           setInboud_Year_One(0)
+                           setInboud_Year_Three(0)
                        }}className={cnOutboundHeadingThree}>{OutboundYearThree}
                     </div>    
                 </div>
@@ -252,8 +264,6 @@ Sidebar.defaultProps = {
     InboundYearOne: "2018",
     InboundYearTwo: "2019",
     InboundYearThree: "2020",
-
-   
 }
 
 

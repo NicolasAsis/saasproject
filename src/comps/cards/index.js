@@ -61,12 +61,7 @@ function Card({ }){
                         <div className="detail_heading">Seller</div>
                         <div className="detail_heading">Status</div>
                     </div>
-                    <p className="item">item aray map goes here</p>
-                    <p className="item">item aray map goes here</p>
-                    <p className="item">item aray map goes here</p>
-                    <p className="item">item aray map goes here</p>
-                    <p className="item">item aray map goes here</p>
-  
+              
                 </div>     
             </div>
         </div>
