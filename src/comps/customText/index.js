@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-function CustomText({Text, TextHeight, TextColor, TextBg, TextSize, TextFont, TextAlign, AlignTextDiv, textBoxDimensionsWidth, textBoxDimensionsHieght, Textdisplay, textBoxdisplay, justifyText, alignText, TextPosition, TextPadding, TextMargin, TextFlex, textBoxFlex, textBoxBG}){
+function CustomText({Text, TextHeight, TextColor, TextBg, TextDecorations, TextSize, TextFont, alignTextUpDown, TextAlign, AlignTextDiv, textBoxDimensionsWidth, textBoxDimensionsHieght, Textdisplay, textBoxdisplay, justifyText, alignText, TextPosition, TextPadding, TextMargin, TextFlex, textBoxFlex, textBoxBG}){
     return(
         <div style={{
             width: textBoxDimensionsWidth,
@@ -27,10 +27,11 @@ function CustomText({Text, TextHeight, TextColor, TextBg, TextSize, TextFont, Te
                 padding: TextPadding,
                 margin: TextMargin,
                 flex: TextFlex,
-                alignItems: "center",
+                alignItems: alignTextUpDown,
                 display: Textdisplay,
-                justifyContent: justifyText
-                
+                justifyContent: justifyText,
+                textDecoration: TextDecorations,
+                textAlign: 'center'
             }}> 
                 {Text} 
             </div>
@@ -47,6 +48,7 @@ CustomText.defaultProps ={
     TextBg: '',
     TextFont: 'Roboto, sans-serif',
     TextSize: '14pt',
+    TextDecorations: '',
     TextHeight: '',
     // Position below
     Textdisplay: '',
@@ -54,6 +56,7 @@ CustomText.defaultProps ={
     TextMargin: '0px',
     TextPadding: '0px',
     TextFlex: '',
+    alignTextUpDown: '',
     // Text box stuff below "parent container of child text div"
     textBoxDimensionsHieght: '',
     TextBoxDimensionsWidth: '',
