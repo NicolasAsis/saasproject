@@ -31,9 +31,9 @@ export const DefaultCustomText = () => {
                 TextAlign = {'flex-start'}
                 justifyText = {''}
                 textBoxdisplay = {'flex'}
-                AlignTextDiv = {''}
+                alignTextDiv = {''}
                 alignTextUpDown = {'center'}
-                TextDecorations = {''}
+                textDecorations = {''}
          />
 }
 
@@ -59,9 +59,9 @@ export const DefaultCustomTextRight = () => {
                 TextAlign = {'flex-end'}
                 justifyText = {''}
                 textBoxdisplay = {'flex'}
-                AlignTextDiv = {''}
+                alignTextDiv = {''}
                 alignTextUpDown = {'center'}
-                TextDecorations = {''}
+                textDecorations = {''}
          />
 }
 export const DefaultCustomTextUp = () => {
@@ -86,9 +86,9 @@ export const DefaultCustomTextUp = () => {
                 TextAlign = {'flex-end'}
                 justifyText = {''}
                 textBoxdisplay = {'flex'}
-                AlignTextDiv = {''}
+                alignTextDiv = {''}
                 alignTextUpDown = {'flex-start'}
-                TextDecorations = {''}
+                textDecorations = {''}
          />
 }
 export const DefaultCustomTextDown = () => {
@@ -113,9 +113,9 @@ export const DefaultCustomTextDown = () => {
                 TextAlign = {'flex-end'}
                 justifyText = {''}
                 textBoxdisplay = {'flex'}
-                AlignTextDiv = {''}
+                alignTextDiv = {''}
                 alignTextUpDown = {'flex-end'}
-                TextDecorations = {''}
+                textDecorations = {''}
          />
 }
 
@@ -142,9 +142,9 @@ export const CustomTextDecorations = () => {
                 TextAlign = {''}
                 justifyText = {'center'}
                 textBoxdisplay = {'flex'}
-                AlignTextDiv = {''}
+                alignTextDiv = {''}
                 alignTextUpDown = {'center'}
-                TextDecorations = {'underline overline wavy orange'}
+                textDecorations = {'underline overline wavy orange'}
          />
 }
 export const CustomTextFlex = () => {
@@ -169,9 +169,9 @@ export const CustomTextFlex = () => {
                 TextAlign = {''}
                 justifyText = {'center'}
                 textBoxdisplay = {'flex'}
-                AlignTextDiv = {''}
+                alignTextDiv = {''}
                 alignTextUpDown = {'center'}
-                TextDecorations = {''}
+                textDecorations = {''}
          />
 }
     
@@ -198,9 +198,9 @@ export const UltimateOptionsCustomText = () => {
                 TextAlign = {'center'}
                 justifyText = {'center'}
                 textBoxdisplay = {'flex'}
-                AlignTextDiv = {'center'}
+                alignTextDiv = {'center'}
                 alignTextUpDown = {'center'}
-                TextDecorations = {''}
+                textDecorations = {''}
          />
 
  

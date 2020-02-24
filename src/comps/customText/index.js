@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-function CustomText({Text, TextHeight, TextColor, TextBg, TextDecorations, TextSize, TextFont, alignTextUpDown, TextAlign, AlignTextDiv, textBoxDimensionsWidth, textBoxDimensionsHieght, Textdisplay, textBoxdisplay, justifyText, alignText, TextPosition, TextPadding, TextMargin, TextFlex, textBoxFlex, textBoxBG}){
+function CustomText({Text, TextHeight, TextColor, TextBg, textDecorations, TextSize, TextFont, alignTextUpDown, TextAlign, alignTextDiv, textBoxDimensionsWidth, textBoxDimensionsHieght, Textdisplay, textBoxdisplay, justifyText, alignText, TextPosition, TextPadding, TextMargin, TextFlex, textBoxFlex, textBoxBG}){
     return(
         <div style={{
             width: textBoxDimensionsWidth,
@@ -12,7 +12,7 @@ function CustomText({Text, TextHeight, TextColor, TextBg, TextDecorations, TextS
             flex: textBoxFlex,
             alignContent: alignText,
             placeContent: TextAlign,
-            alignItems: AlignTextDiv
+            alignItems: alignTextDiv
 
             
         }}>
@@ -30,7 +30,7 @@ function CustomText({Text, TextHeight, TextColor, TextBg, TextDecorations, TextS
                 alignItems: alignTextUpDown,
                 display: Textdisplay,
                 justifyContent: justifyText,
-                textDecoration: TextDecorations,
+                textDecoration: textDecorations,
                 textAlign: 'center'
             }}> 
                 {Text} 
@@ -48,7 +48,7 @@ CustomText.defaultProps ={
     TextBg: '',
     TextFont: 'Roboto, sans-serif',
     TextSize: '14pt',
-    TextDecorations: '',
+    textDecorations: '',
     TextHeight: '',
     // Position below
     Textdisplay: '',
@@ -64,7 +64,7 @@ CustomText.defaultProps ={
     textBoxFlex: '0',
     TextAlign: '',
     alignText: '',
-    AlignTextDiv: '',
+    alignTextDiv: '',
     justifyText: '',
     textBoxdisplay: ''
     
