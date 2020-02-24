@@ -13,7 +13,7 @@ if(addPlaceholder) {
 }
 
   return (
-    <div className="textInputCont">
+    <div className="textInputCont" style={{width:inputWidth}}>
         <p className="inputTitle" style={{color:titleColor}}>{customTitle}</p>
         <input type="text" placeholder={placeHolder} className="inputBox" style={{width:inputWidth,borderColor:inputBorder}}/>
     </div>
