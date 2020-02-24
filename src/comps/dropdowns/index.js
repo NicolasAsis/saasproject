@@ -5,7 +5,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 
 
-function Dropdown({items, title, ddTitle, children, dropdown, ddwidth}){
+function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleColor, iconSize}){
     // import scss width atribute
 
     // End ^
@@ -28,16 +28,18 @@ function Dropdown({items, title, ddTitle, children, dropdown, ddwidth}){
     return (
         <div className="dd_container">
            <p className="dd_title">{title}</p>
-            <div className="dropdown" onClick={()=>{
-                setDrop(!drop)
-         
+            <div className="dropdown" style={{
+                    flex: ddwidth
+            }} onClick={()=>{
+                setDrop(!drop) 
             }}>   
             
-            <div className="icon_holder">
+            <div className="icon_holder" style={{
+                color: ddTitleColor
+            }}>
                 {ddTitle}
-                <div className="icon_holder_space"></div>
                 <div className="icon_style">
-                <IoIosArrowDown />
+                <IoIosArrowDown size={iconSize} />
                 </div>
             
             </div>
@@ -60,7 +62,9 @@ Dropdown.defaultProps = {
     dropdown:false,
     // new installation below
     ddTitle: "default",
-    ddwidth: 1
+    ddwidth: 1,
+    ddTitleColor: 'black',
+    iconSize: 13,
 };
 
 
