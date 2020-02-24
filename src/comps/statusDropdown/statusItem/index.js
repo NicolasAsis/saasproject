@@ -2,14 +2,14 @@ import React from "react";
 
 import {FiChevronDown} from 'react-icons/fi';
 
-function StatusItem({itemTitle, active}) {
+function StatusItem({itemTitle, active,circColor,textColor}) {
   return (
     <div className="statusItem">
       <div className="itemCont">
-        <div className="itemCircle"></div>
+        <div className="itemCircle" style={{backgroundColor:circColor}}></div>
       </div>
       <div className="itemCont">
-        <p className="itemText">{itemTitle}</p>
+        <p className="itemText" style={{color:textColor}}>{itemTitle}</p>
       </div>
       <div className="itemCont">
         {/* <FiChevronDown /> */}
@@ -20,7 +20,9 @@ function StatusItem({itemTitle, active}) {
 
 StatusItem.defaultProps = {
   itemTitle: "Default Item",
-  active: false
+  active: false,
+  circColor:"#FB3232",
+  textColor:"#FB3232"
 };
 
 export default StatusItem;

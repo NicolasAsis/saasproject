@@ -11,3 +11,13 @@ export default {
 export const DefaultStatusDropdown = () => {
     return <StatusDropdown />
 }
+
+export const CustomStatusDropdown = () => {
+    return <StatusDropdown 
+        statusText="Test"
+        circleColor="green"
+        textColor="green"
+        arrowColor="green"
+        customIcon="FiCheck"
+    />
+}

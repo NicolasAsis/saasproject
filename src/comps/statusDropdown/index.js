@@ -4,28 +4,36 @@ import { FiChevronDown } from "react-icons/fi";
 
 import StatusItem from "./statusItem";
 
-function StatusDropdown({ dropdown, status, children, items }) {
+import * as FeatherIcon from 'react-icons/fi';
+
+function StatusDropdown({ dropdown, statusText, children, items, circleColor,textColor,arrowColor,customIcon}) {
   const [drop, setDrop] = useState(false);
   var cn = "dropmenu";
 
   if (drop) {
     cn = "dropmenu dropmenu_active";
+    customIcon = "FiChevronUp";
   }
 
+  var Icon = FeatherIcon[customIcon];
+
   return (
-    <div className="mainCont">
-      <div className="statusCont">
-        <div className="statusSubCont">
-          <div className="statusCircle"></div>
-        </div>
-        <div className="statusSubCont">
-          <p className="statusText">{status}</p>
-        </div>
-        <div className="statusSubCont">
-          <FiChevronDown
-            onClick={() => {
+    <div className="mainCont" >
+      <div 
+          className="statusCont"  
+          onClick={() => {
               setDrop(!drop);
-            }}
+            }}>
+        <div className="statusSubCont">
+          <div className="statusCircle" style={{backgroundColor:circleColor}}></div>
+        </div>
+        <div className="statusSubCont">
+          <p className="statusText" style={{color:textColor}}>{statusText}</p>
+        </div>
+        <div className="statusSubCont">
+          <Icon
+            size={15}
+            style={{color:arrowColor}}
           />
         </div>
       </div>
@@ -41,16 +49,17 @@ function StatusDropdown({ dropdown, status, children, items }) {
 
 StatusDropdown.defaultProps = {
   dropdown: false,
-  status: "Default",
+  statusText: "Default",
   children: null,
   items: [
     {
-      itemTitle: "one"
-    },
-    {
-      itemTitle: "two"
+      itemTitle: "Issue"
     }
-  ]
+  ],
+  circleColor:"#444B95",
+  textColor:"#444B95",
+  arrowColor:"#444B95",
+  customIcon:"FiChevronDown"
 };
 
 export default StatusDropdown;
