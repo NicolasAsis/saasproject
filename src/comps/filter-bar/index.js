@@ -51,7 +51,7 @@ function FilterBar({placeholder, placholderColor}){
             ddTitle = {
                 Monthitems[0].itemTitle
             }
-            ddwidth = {1}
+            ddwidth = {"40%"}
             ddTitleColor = {'#888FD3'}
             iconSize = {13}
             icon = {'IoIosArrowDown'}
@@ -66,7 +66,7 @@ function FilterBar({placeholder, placholderColor}){
             ddTitle = {
                 Modelitems[0].itemTitle
             }
-            ddwidth = {1}
+            ddwidth = {"40%"}
             ddTitleColor = {'#888FD3'}
             iconSize = {13}
              icon = {'IoIosArrowDown'}
