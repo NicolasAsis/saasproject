@@ -25,7 +25,7 @@ function MainButton({defaultText,width,height,textSize,addIcon,customIcon}){
             height:height
         }}
         >
-                {addIcon&&<Icon color='white' size={15}/> }
+                {addIcon&&<Icon color='white' size={15}/>}
                 <p className="butText" style={{fontSize:textSize}}>{defaultText}</p>
         </div>
     )

@@ -6,7 +6,7 @@ import StatusItem from "./statusItem";
 
 import * as FeatherIcon from 'react-icons/fi';
 
-function StatusDropdown({ dropdown, statusText, children, items, circleColor,textColor,arrowColor,customIcon}) {
+function StatusDropdown({ dropdown, statusText, children, items, circleColor,textColor,textSize,arrowColor,customIcon}) {
   const [drop, setDrop] = useState(false);
   var cn = "dropmenu";
 
@@ -20,7 +20,7 @@ function StatusDropdown({ dropdown, statusText, children, items, circleColor,tex
   return (
     <div className="mainCont" >
       <div 
-          className="statusCont"  
+          className="statusCont" 
           onClick={() => {
               setDrop(!drop);
             }}>
@@ -28,7 +28,7 @@ function StatusDropdown({ dropdown, statusText, children, items, circleColor,tex
           <div className="statusCircle" style={{backgroundColor:circleColor}}></div>
         </div>
         <div className="statusSubCont">
-          <p className="statusText" style={{color:textColor}}>{statusText}</p>
+          <p className="statusText" style={{color:textColor,fontSize:textSize}}>{statusText}</p>
         </div>
         <div className="statusSubCont">
           <Icon
@@ -58,6 +58,7 @@ StatusDropdown.defaultProps = {
   ],
   circleColor:"#444B95",
   textColor:"#444B95",
+  textSize:"13px",
   arrowColor:"#444B95",
   customIcon:"FiChevronDown"
 };
