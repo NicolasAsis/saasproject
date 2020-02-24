@@ -7,8 +7,48 @@ import TextInput from "../textInput/index";
 import StatusDropdown from '../statusDropdown/index';
 
 import MainButton from '../mainButton/index';
+import Dropdown from "../dropdowns";
 
 function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
+
+  var ProvinceItem = [
+    {
+        itemTitle:'BC',
+        onClick:()=>{alert("go to model#")}
+    },
+    {
+        itemTitle:'QB',
+        onClick:()=>{alert("go to model#")}
+    },
+    {
+        itemTitle:'SW',
+        onClick:()=>{alert("go to model#")}
+    },
+]
+
+
+
+  var CityItem = [
+    {
+        itemTitle:'Richmond',
+        onClick:()=>{alert("go to january")}
+    },
+    {
+        itemTitle:'Burnaby',
+        onClick:()=>{alert("go to Feburary")}
+    },
+    {
+        itemTitle:'Langly',
+        onClick:()=>{alert("go to March")}
+       
+    },
+
+    {
+        itemTitle:'April',
+        onClick:()=>{alert("go to April")}
+    }
+]
+
   var Icon = FeatherIcon[customIcon];
 
   var leftBar = "";
@@ -42,8 +82,46 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
           </div>
           <div className="formRow">
             <TextInput inputWidth="80%" customTitle="Location"/>
-            <StatusDropdown statusText="Richmond" circleColor="#FFFFFF" textSize="14px"/>
-            <StatusDropdown statusText="BC" circleColor="#FFFFFF" textSize="14px"/>
+
+        <div style={{display:'flex', width:'50%', flex:1, flexDirection:'row', marginTop: "5vh",  marginRight: '5vw'}}>
+          <div style={{width:"100%", flex: 1}}>
+            <Dropdown 
+            items={CityItem}
+            dropdown={true}
+            ddTitle = {
+               CityItem[0].itemTitle
+            }
+            // flex width below
+            ddwidth = {"100%"}
+            ddTitleColor = {'#888FD3'}
+            iconSize = {13}
+            icon = {'IoIosArrowDown'}
+            iconColor = {'#888FD3'}
+            ddposition = {''}
+            key={0}
+            />
+            </div>
+
+            <div style={{flex:1, width: "20%"}}>
+            <Dropdown 
+            items={ProvinceItem}
+            dropdown={true} 
+            ddTitle = {
+                ProvinceItem[0].itemTitle
+            }
+            // flex width below
+            ddwidth = {"3%"}
+            ddTitleColor = {'#888FD3'}
+            iconSize = {13}
+            icon = {'IoIosArrowDown'}
+            iconColor = {'#888FD3'}
+            ddposition = {'absolute'}
+            titleFontSize = {'10pt'}
+            key={1}
+            />
+            </div>
+          </div>
+
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import * as IoIos from 'react-icons/io';
 
 
 
-function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleColor, iconSize, icon, iconColor}){
+function Dropdown({items, title, ddTitle, titleFontSize, ddposition, children, dropdown, ddwidth, ddTitleColor, iconSize, icon, iconColor}){
 
    
  
@@ -27,9 +27,12 @@ function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleCo
 
     return (
         <div className="dd_container">
-           <p className="dd_title">{title}</p>
+           <p className="dd_title" style={{}}>{title}</p>
             <div className="dropdown" style={{
-                    flex: ddwidth
+                    width: ddwidth,
+                    position: ddposition,
+                    fontSize: titleFontSize,
+                    padding: "3px"
             }} onClick={()=>{
                 setDrop(!drop) 
     
@@ -58,16 +61,18 @@ function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleCo
 
 Dropdown.defaultProps = {
     menuTitle: "Default Title",
-    title:"balls",
+    title:"",
     children: null,
     dropdown:false,
     // new installation below
     ddTitle: "default",
-    ddwidth: 1,
+    ddwidth: "200px",
     ddTitleColor: '#888FD3',
     iconSize: 13,
      icon: 'IoIosArrowDown',
-     iconColor: ''
+     iconColor: '',
+     ddposition: '',
+     titleFontSize: ''
 };
 
 
