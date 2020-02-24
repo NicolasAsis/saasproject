@@ -10,12 +10,18 @@
     background-color:#FFFFFF;
     height:75px;
     border: 3px solid #F1F1F1;
-    @include flex();
-    align-items:center;
+    display:flex;
+    flex-direction:column;
     font-family: 'Roboto', sans-serif;
-    overflow:hidden;
-    transition:height 0.4s;
+    // overflow:hidden;
+    // transition:height 0.4s;
     cursor:pointer;
+
+    .itemSubCont {
+        @include flex();
+        align-items:center;
+        height:75px;
+    }
 
     .itemInfo {
         flex:1;
@@ -29,12 +35,23 @@
         height:100px;
     }
 
+    .moreDet {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+      }
+    
+    .moreDet_active {
+        max-height: 100vh;
+      }
+
 }
+
 
 .itemContSelect {
     border-left: 10px solid #444B95;
 }
 
 .itemCont_active {
-    height:200px;
+    max-height:100vh;
 }

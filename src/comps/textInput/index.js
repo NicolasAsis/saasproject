@@ -24,7 +24,7 @@ TextInput.defaultProps = {
     customIcon:"FiSave",
     customTitle:"Default Title",
     titleColor:"#8C93D5",
-    inputWidth:"20%",
+    inputWidth:"40%",
     addPlaceholder:false,
     customPlaceholder:"Test",
     inputBorder:"#D8DBFF"

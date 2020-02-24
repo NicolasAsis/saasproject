@@ -11,3 +11,9 @@ export default {
 export const DefaultItemDetails = () => {
     return <ItemDetails />
 }
+
+export const ItemDetailsWithBar = () => {
+    return <ItemDetails 
+        addSelectedBar="true"
+    />
+}
