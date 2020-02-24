@@ -3,7 +3,7 @@ import Dropdown from '../dropdowns'
 
 
 
-function FilterBar({placeholder}){
+function FilterBar({placeholder, placholderColor}){
 
     var Monthitems = [
         {
@@ -52,10 +52,10 @@ function FilterBar({placeholder}){
                 Monthitems[0].itemTitle
             }
             ddwidth = {1}
-            ddTitleColor = {'black'}
+            ddTitleColor = {'#888FD3'}
             iconSize = {13}
             icon = {'IoIosArrowDown'}
-            iconColor = {'black'}
+            iconColor = {'#888FD3'}
             key={0}
             />
 
@@ -67,22 +67,23 @@ function FilterBar({placeholder}){
                 Modelitems[0].itemTitle
             }
             ddwidth = {1}
-            ddTitleColor = {'black'}
+            ddTitleColor = {'#888FD3'}
             iconSize = {13}
              icon = {'IoIosArrowDown'}
-             iconColor = {'black'}
+             iconColor = {'#888FD3'}
             key={1}
             />
 
 
             
-            <input  type='text' className="search" placeholder={placeholder} />
+            <input  type='text' className="search" style={{color: placholderColor}} placeholder={placeholder} />
         </div>
     )
 }
 
 FilterBar.defaultProps = {
-    placeholder: "search"
+    placeholder: "search",
+    placholderColor: '#888FD3'
 }
 
 export default FilterBar

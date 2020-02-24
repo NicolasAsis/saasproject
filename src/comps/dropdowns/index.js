@@ -59,10 +59,10 @@ Dropdown.defaultProps = {
     // new installation below
     ddTitle: "default",
     ddwidth: 1,
-    ddTitleColor: 'black',
+    ddTitleColor: '#888FD3',
     iconSize: 13,
      icon: 'IoIosArrowDown',
-     iconColor: 'black'
+     iconColor: ''
 };
 
 
