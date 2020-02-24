@@ -37,6 +37,19 @@
         background-color:transparent;
     }
 
+    .itemCont2 {
+        flex:2;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        // color:#FB3232;
+        height:100%;
+        margin:0px;
+        padding:0px;
+        border:none;
+        background-color:transparent;
+    }
+
     .itemCircle {
         width:6px;
         height:6px;
@@ -47,6 +60,7 @@
     .itemText {
         color:#FB3232;
         font-size:13pt;
+        // padding:5px;
         // background-color:green;
     }
 }

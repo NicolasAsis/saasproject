@@ -8,7 +8,7 @@ function StatusItem({itemTitle, active,circColor,textColor}) {
       <div className="itemCont">
         <div className="itemCircle" style={{backgroundColor:circColor}}></div>
       </div>
-      <div className="itemCont">
+      <div className="itemCont2">
         <p className="itemText" style={{color:textColor}}>{itemTitle}</p>
       </div>
       <div className="itemCont">
