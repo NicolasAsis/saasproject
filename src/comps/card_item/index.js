@@ -48,7 +48,7 @@ function CardItem({moreInfo,children}){
             </div>
             {children}
             <div className={cn}>
-                <ItemDetails />
+                <ItemDetails  />
             </div>
         </div>
     )

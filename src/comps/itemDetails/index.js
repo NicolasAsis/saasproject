@@ -83,7 +83,14 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
           <div className="formRow">
             <TextInput inputWidth="80%" customTitle="Location"/>
 
-        <div style={{display:'flex', width:'50%', flex:1, flexDirection:'row', marginTop: "5vh",  marginRight: '5vw'}}>
+        <div style={{
+              display:'flex', 
+              width:'50%', flex:1, 
+              flexDirection:'row',
+              marginTop: "5vh", 
+              marginRight: '5vw',
+              position: 'relative'
+              }}>
           <div style={{width:"100%", flex: 1}}>
             <Dropdown 
             items={CityItem}
@@ -102,7 +109,7 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
             />
             </div>
 
-            <div style={{flex:1, width: "20%"}}>
+            <div style={{flex:1, width: "20%",}}>
             <Dropdown 
             items={ProvinceItem}
             dropdown={true} 
@@ -110,7 +117,7 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
                 ProvinceItem[0].itemTitle
             }
             // flex width below
-            ddwidth = {"3%"}
+            ddwidth = {"30%"}
             ddTitleColor = {'#888FD3'}
             iconSize = {13}
             icon = {'IoIosArrowDown'}
