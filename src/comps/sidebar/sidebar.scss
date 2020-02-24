@@ -5,7 +5,6 @@ body {
 
 .bar {
     display: flex;
-    flex: 0.4;
     height: 100vh;
     flex-direction: column;
     background-color: white;
@@ -13,7 +12,8 @@ body {
     justify-items: center;
     z-index: 1;
     margin: 0;
-    box-shadow: rgba(0, 0, 0, 0.249) 10px 1px 20px 2px;
+    box-shadow: rgba(0, 0, 0, 0.249) 3px 0px 17px 2px;
+    margin: 0;
 }
 
 .container {
@@ -50,7 +50,6 @@ body {
 .SliderPageHeading {
     margin:10px; 
     color: #444B95;
-
 }
 
 .year-heading-active {
@@ -65,7 +64,7 @@ body {
     background-color: rgba(240, 240, 240, 0.263);
     height: 100vh;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.249) 10px 1px 50px 5px;
+    box-shadow: rgba(0, 0, 0, 0.249) -10px 0px 20px 5px;
     
 }
 //  Slider Hidden

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 
-
 // SVG BELOW
 const InvSVG = () => (
 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +38,7 @@ var cnCategoryHeadingOne = "Slider-category-Titles";
 var cnCategoryHeadingTwo = "Slider-category-Titles";
 
 
-function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree}){
+function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree, PageName}){
 
     const [inboud_year_one, setInboud_Year_One] = useState(0)
     const [inboud_year_two, setInboud_Year_Two] = useState(0)
@@ -132,7 +131,8 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
 
         <div className="container">
 
-            <div className="bar">
+            <div className="bar"
+            style={{  flex: barWidth}}>
                 {/* Space Below */}
                 <div className="space-above"></div>
                 {/* Space End */}
@@ -171,7 +171,7 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                 {/* Inbound below */}
              <div className={cnSlider}>
                 <div style={{display:"flex", flexDirection:"column", flex:1}}>
-                    <h1 className="SliderPageHeading">Inventory</h1>
+                    <h1 className="SliderPageHeading">{PageName}</h1>
                     <div className={cnCategoryHeadingOne} 
                         onClick={()=>{
                         setCategory_One(1)
@@ -185,6 +185,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setInboud_Year_Three(0)
                         setCategory_One(1)
                         setCategory_Two(0)
+                        // unset outbound actives
+                        setOutbound_Year_One(0)
+                        setOutbound_Year_Two(0)
+                        setOutbound_Year_Three(0)
                        }}className={cnInboundHeadingOne}>{InboundYearOne}
                     </div>
                     <div onClick={()=>{
@@ -193,6 +197,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setInboud_Year_Three(0)
                         setCategory_One(1)
                         setCategory_Two(0)
+                        // unset outbound actives
+                        setOutbound_Year_One(0)
+                        setOutbound_Year_Two(0)
+                        setOutbound_Year_Three(0)
                        }}className={cnInboundHeadingTwo}>{InboundYearTwo}
                     </div>
                     <div onClick={()=>{
@@ -201,6 +209,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setInboud_Year_One(0)
                         setCategory_One(1)
                         setCategory_Two(0)
+                        // unset outbound actives
+                        setOutbound_Year_One(0)
+                        setOutbound_Year_Two(0)
+                        setOutbound_Year_Three(0)
                        }}className={cnInboundHeadingThree}>{InboundYearThree}                 
                      </div>
                 </div> 
@@ -218,10 +230,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setOutbound_Year_Three(0)
                         setCategory_One(0)
                         setCategory_Two(1)
-                           // Inbound off
-                           setInboud_Year_Two(0)
-                           setInboud_Year_One(0)
-                           setInboud_Year_Three(0)
+                        // unset inbound actives
+                        setInboud_Year_Two(0)
+                        setInboud_Year_One(0)
+                        setInboud_Year_Three(0)
                        }}className={cnOutboundHeadingOne}>{OutboundYearOne}
                     </div>
                     <div onClick={()=>{
@@ -230,10 +242,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setOutbound_Year_Three(0)
                         setCategory_One(0)
                         setCategory_Two(1)
-                           // Inbound off
-                           setInboud_Year_Two(0)
-                           setInboud_Year_One(0)
-                           setInboud_Year_Three(0)
+                        // unset inbound actives
+                        setInboud_Year_Two(0)
+                        setInboud_Year_One(0)
+                        setInboud_Year_Three(0)
                        }}className={cnOutboundHeadingTwo}>{OutboundYearTwo}
                     </div>
                     <div onClick={()=>{
@@ -242,10 +254,10 @@ function Sidebar({TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYea
                         setOutbound_Year_One(0)
                         setCategory_One(0)
                         setCategory_Two(1)
-                           // Inbound off
-                           setInboud_Year_Two(0)
-                           setInboud_Year_One(0)
-                           setInboud_Year_Three(0)
+                        // unset inbound actives
+                        setInboud_Year_Two(0)
+                        setInboud_Year_One(0)
+                        setInboud_Year_Three(0)
                        }}className={cnOutboundHeadingThree}>{OutboundYearThree}
                     </div>    
                 </div>
@@ -264,6 +276,10 @@ Sidebar.defaultProps = {
     InboundYearOne: "2018",
     InboundYearTwo: "2019",
     InboundYearThree: "2020",
+    PageName: 'Inventory',
+    // below is in flex i.e 0.2 flex
+    barWidth: 0.2
+    //  end ^
 }
 
 
