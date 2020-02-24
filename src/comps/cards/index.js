@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
-import FilterBar from '../filter-bar';
 
 
 
-function Card({ }){
+function Card({headerBarFontSize, cardFontSize, cardFontFamily, headBarFontFamily, HeadBarHeight, cardBorderRadius }){
     const [inbound, setInbound] = useState(1)
     const [outbound, setOutBound] = useState(0)
     const [active, setActive] = useState(true)
@@ -31,6 +30,12 @@ function Card({ }){
             <div className="tab-container">
        
             <div 
+            style={{
+                fontSize:cardFontSize,
+                fontFamily:cardFontFamily,
+                borderTopLeftRadius:cardBorderRadius,
+                borderTopRightRadius:cardBorderRadius
+            }}
                 className={cnOne} 
                 onClick={()=>{
                 setInbound(1)
@@ -38,7 +43,14 @@ function Card({ }){
                 setActive(active)
              }}>INBOUND
              </div>
+             
             <div 
+              style={{
+                fontSize:cardFontSize,
+                fontFamily:cardFontFamily,
+                borderTopLeftRadius:cardBorderRadius,
+                borderTopRightRadius:cardBorderRadius
+            }}
                 className={cnTwo} 
                 onClick={()=>{
                 setInbound(0)
@@ -51,7 +63,12 @@ function Card({ }){
             <div className="body">
         
                 <div className="item-section">
-                    <div className="item_details">
+                    <div className="item_details" 
+                    style={{
+                        fontSize:headerBarFontSize,
+                        fontFamily:headBarFontFamily,
+                        height: HeadBarHeight
+                        }}>
                         <div className="detail_heading">Date</div>
                         <div className="detail_heading">TiD</div>
                         <div className="detail_heading">Model#</div>
@@ -69,6 +86,13 @@ function Card({ }){
 }
 
 Card.defaultProps = {
+    headerBarFontSize: '10pt',
+    cardFontSize: '12pt',
+    cardFontFamily: 'Roboto, sans-serif',
+    headBarFontFamily: 'Roboto, sans-serif',
+    HeadBarHeight: '13vh',
+    cardBorderRadius: '10px'
+
  
 }
 

@@ -1,19 +1,14 @@
 
 import React, {useState} from 'react';
 import DdItem from './dropdown-Items';
-import { IoIosArrowDown } from 'react-icons/io';
+import * as IoIos from 'react-icons/io';
 
 
 
-function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleColor, iconSize}){
-    // import scss width atribute
+function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleColor, iconSize, icon, iconColor}){
 
-    // End ^
-
+    var Icon = IoIos[icon];
  
-
-
-
     const [drop, setDrop] = useState(false)
     var cn = "dropmenu"
 
@@ -32,6 +27,7 @@ function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleCo
                     flex: ddwidth
             }} onClick={()=>{
                 setDrop(!drop) 
+    
             }}>   
             
             <div className="icon_holder" style={{
@@ -39,7 +35,7 @@ function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleCo
             }}>
                 {ddTitle}
                 <div className="icon_style">
-                <IoIosArrowDown size={iconSize} />
+                {icon&&<Icon color={iconColor} size={iconSize}/>}
                 </div>
             
             </div>
@@ -57,7 +53,7 @@ function Dropdown({items, title, ddTitle, children, dropdown, ddwidth, ddTitleCo
 
 Dropdown.defaultProps = {
     menuTitle: "Default Title",
-    title:"",
+    title:"balls",
     children: null,
     dropdown:false,
     // new installation below
@@ -65,6 +61,8 @@ Dropdown.defaultProps = {
     ddwidth: 1,
     ddTitleColor: 'black',
     iconSize: 13,
+     icon: 'IoIosArrowDown',
+     iconColor: 'black'
 };
 
 

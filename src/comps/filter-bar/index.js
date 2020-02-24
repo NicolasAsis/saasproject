@@ -47,16 +47,33 @@ function FilterBar({placeholder}){
             <Dropdown 
             items={Monthitems}
             dropdown={true}
-            title="month"
+            title= {"month"}
+            ddTitle = {
+                Monthitems[0].itemTitle
+            }
+            ddwidth = {1}
+            ddTitleColor = {'black'}
+            iconSize = {13}
+            icon = {'IoIosArrowDown'}
+            iconColor = {'black'}
             key={0}
             />
 
             <Dropdown 
             items={Modelitems}
             dropdown={true}
-            title="model"
+            title= {"model"}
+            ddTitle = {
+                Modelitems[0].itemTitle
+            }
+            ddwidth = {1}
+            ddTitleColor = {'black'}
+            iconSize = {13}
+             icon = {'IoIosArrowDown'}
+             iconColor = {'black'}
             key={1}
             />
+
 
             
             <input  type='text' className="search" placeholder={placeholder} />
@@ -65,7 +82,7 @@ function FilterBar({placeholder}){
 }
 
 FilterBar.defaultProps = {
-    placeholder: "default"
+    placeholder: "search"
 }
 
 export default FilterBar
