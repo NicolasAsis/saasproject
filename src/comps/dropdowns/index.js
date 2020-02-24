@@ -5,7 +5,7 @@ import * as IoIos from 'react-icons/io';
 
 
 
-function Dropdown({items, title, ddTitle, titleFontSize, ddposition, children, dropdown, ddwidth, ddTitleColor, iconSize, icon, iconColor}){
+function Dropdown({items, title, ddTitle, titleFontSize, ddposition, children, dropdown, ddwidth,ddShow, ddTitleColor, iconSize, icon, iconColor}){
 
    
  
@@ -32,6 +32,7 @@ function Dropdown({items, title, ddTitle, titleFontSize, ddposition, children, d
                     width: ddwidth,
                     position: ddposition,
                     fontSize: titleFontSize,
+                    display: ddShow,
                     padding: "3px"
             }} onClick={()=>{
                 setDrop(!drop) 
@@ -72,7 +73,8 @@ Dropdown.defaultProps = {
      icon: 'IoIosArrowDown',
      iconColor: '',
      ddposition: '',
-     titleFontSize: ''
+     titleFontSize: '',
+     ddShow: true
 };
 
 
