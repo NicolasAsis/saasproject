@@ -1,0 +1,66 @@
+@mixin flex($dir:row){
+    display:flex;
+    flex-direction:$dir;
+}
+
+.statusItem {
+    background-color:#FFFFFF;
+    border-radius:3px;
+    height:25px;
+    width:100px;
+    @include flex();
+    align-items:center;
+    font-family: 'Roboto', sans-serif;
+    padding: 1px;
+    margin: 10px 0;
+    font-size:13px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor:pointer;
+    // position:absolute;
+    // z-index:100;
+
+    &:first-of-type {
+        margin-top:10px;
+
+    }
+
+    .itemCont {
+        flex:1;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        // color:#FB3232;
+        height:100%;
+        margin:0px;
+        padding:0px;
+        border:none;
+        background-color:transparent;
+    }
+
+    .itemCont2 {
+        flex:2;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        // color:#FB3232;
+        height:100%;
+        margin:0px;
+        padding:0px;
+        border:none;
+        background-color:transparent;
+    }
+
+    .itemCircle {
+        width:6px;
+        height:6px;
+        background-color:#FB3232;
+        border-radius:100px;
+    }
+
+    .itemText {
+        color:#FB3232;
+        font-size:13pt;
+        // padding:5px;
+        // background-color:green;
+    }
+}

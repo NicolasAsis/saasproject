@@ -1,0 +1,57 @@
+@import './itemInfo/itemInfo.scss';
+
+
+@mixin flex($dir:row){
+    display:flex;
+    flex-direction:$dir;
+}
+
+.itemCont {
+    background-color:#FFFFFF;
+    height:75px;
+    border: 3px solid #F1F1F1;
+    display:flex;
+    flex-direction:column;
+    font-family: 'Roboto', sans-serif;
+    // overflow:hidden;
+    // transition:height 0.4s;
+    cursor:pointer;
+
+    .itemSubCont {
+        @include flex();
+        align-items:center;
+        height:75px;
+    }
+
+    .itemInfo {
+        flex:1;
+        text-align:center;
+        margin:5px;
+        font-size:18px;
+        color:#444B95;
+    }
+
+    .moreIcon_style {
+        height:100px;
+    }
+
+    .moreDet {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+      }
+    
+    .moreDet_active {
+        max-height: 100vh;
+      }
+
+}
+
+
+.itemContSelect {
+    border-left: 10px solid #444B95;
+}
+
+.itemCont_active {
+    max-height:100vh;
+}

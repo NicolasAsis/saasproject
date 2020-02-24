@@ -1,0 +1,20 @@
+
+.inputTitle {
+    font-family: Roboto;
+    font-size:13px;
+    line-height:5px;
+    color: #8C93D5;
+    margin-bottom:10px;
+}
+
+.inputBox {
+    height:30px;
+    border: 2px solid #D8DBFF;
+    border-radius:3px;
+    color:#444B95;
+}
+
+.inputBox:focus {
+    border: 2px solid #8C93D5 !important;
+    outline: none !important;
+}

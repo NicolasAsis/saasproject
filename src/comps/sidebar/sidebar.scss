@@ -1,0 +1,125 @@
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+.bar {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: white;
+    align-content: center;
+    justify-items: center;
+    z-index: 1;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.249) 3px 0px 17px 2px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 50vw;
+}
+
+.year-heading {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  rgba(65, 51, 153, 0.379);;
+}
+.year-heading_active {
+   color: rgb(65, 51, 153);
+}
+
+// Inbound or outbound
+.Slider-category-Titles {
+   padding: 20px;
+    color: rgb(69, 84, 218);
+    font-size: 17pt;
+}
+.Slider-category-Titles-active {
+    background-color: rgba(69, 84, 218, 0.201);
+}
+// End ^
+
+
+// Inventory Heading 
+.SliderPageHeading {
+    margin:10px; 
+    color: #444B95;
+}
+
+.year-heading-active {
+    background-color: rgba(140, 147, 213, 0.66);
+  
+}
+
+// Slider 
+.year_slider {
+    display: flex;
+    width: 20vw;
+    background-color: rgba(240, 240, 240, 0.263);
+    height: 100vh;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.249) -10px 0px 20px 5px;
+    
+}
+//  Slider Hidden
+.year_slider-inactive{
+    flex: 0;
+    height: 100vh;
+    display: none;
+}
+
+.userIcon {
+    align-self: center;
+    flex: 3;
+    
+
+}
+
+.inventory-icon {
+    flex: 1;
+    margin: 10px;
+    border-radius: 140px;
+    background-color: #8C93D5;
+    align-self: center;
+}
+
+.dashboard-icon {
+    flex: 1;
+    margin: 10px;
+    border-radius: 140px;
+    background-color: #8C93D5;
+    align-self: center;
+  
+}
+
+.dashboard-icon:active {
+    background-color: #8C93D5 ;
+}
+
+.inventory-icon:active {
+    background-color: #8C93D5; 
+}
+
+.dashboard-icon-inactive {
+    
+    background-color: white;
+}
+
+.inventory-icon-inactive {
+    background-color: white;
+}
+
+.space {
+    flex: 2;
+}
+
+.space-above {
+    flex: 2;
+}
+}
