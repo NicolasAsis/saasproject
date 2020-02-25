@@ -56,6 +56,8 @@ function FilterBar({placeholder, placholderColor}){
             iconSize = {13}
             icon = {'IoIosArrowDown'}
             iconColor = {'#888FD3'}
+            ddposition = {'absolute'}
+            ddwidth = {"10%"}
             key={0}
             />
 
@@ -71,6 +73,8 @@ function FilterBar({placeholder, placholderColor}){
             iconSize = {13}
              icon = {'IoIosArrowDown'}
              iconColor = {'#888FD3'}
+             ddposition = {'absolute'}
+             ddwidth = {"10%"}
             key={1}
             />
 

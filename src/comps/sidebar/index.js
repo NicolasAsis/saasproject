@@ -278,7 +278,7 @@ Sidebar.defaultProps = {
     InboundYearThree: "2020",
     PageName: 'Inventory',
     // below is in flex i.e 0.2 flex
-    barWidth: 0.2
+    barWidth: 0.1
     //  end ^
 }
 
