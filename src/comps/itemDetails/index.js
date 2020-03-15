@@ -81,13 +81,13 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
             <TextInput inputWidth="100%" customTitle="Phone No."/>
           </div>
           <div className="formRow">
-            <TextInput inputWidth="80%" customTitle="Location"/>
+            <TextInput inputWidth="90%" customTitle="Location"/>
 
         <div style={{
               display:'flex', 
               width:'50%', flex:1, 
               flexDirection:'row',
-              marginTop: "5vh", 
+              marginTop: "4vh", 
               marginRight: '5vw',
               position: 'relative'
               }}>
@@ -106,6 +106,7 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
             iconColor = {'#888FD3'}
             ddposition = {''}
             key={0}
+            titleFontSize={"13px"}
             />
             </div>
 
@@ -125,6 +126,7 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
             ddposition = {'absolute'}
             titleFontSize = {'10pt'}
             key={1}
+            titleFontSize={"13px"}
             />
             </div>
           </div>

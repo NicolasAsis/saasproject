@@ -1,21 +1,23 @@
 import React, {useState} from 'react';
+import PlanCardHolder from '../planCardHolder'
+import Card from '../cards'
 
 
 // SVG BELOW
 const InvSVG = () => (
 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M27.9642 14.5706L36.6308 18.9039C37.3671 19.2698 37.8329 20.0209 37.8333 20.8431V31.1673C37.8329 31.9894 37.3671 32.7405 36.6308 33.1064L27.9642 37.4398C27.3539 37.7452 26.6353 37.7452 26.025 37.4398L17.3583 33.1064C16.6228 32.7358 16.1609 31.9801 16.1667 31.1564V20.8431C16.1671 20.0209 16.6329 19.2698 17.3692 18.9039L26.0358 14.5706C26.6432 14.2688 27.3568 14.2688 27.9642 14.5706Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.5133 19.6733L27 24.9167L37.4866 19.6733" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M27 37.6565V24.9165" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M21.5833 16.7915L32.4166 22.2082" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M27.9642 14.5706L36.6308 18.9039C37.3671 19.2698 37.8329 20.0209 37.8333 20.8431V31.1673C37.8329 31.9894 37.3671 32.7405 36.6308 33.1064L27.9642 37.4398C27.3539 37.7452 26.6353 37.7452 26.025 37.4398L17.3583 33.1064C16.6228 32.7358 16.1609 31.9801 16.1667 31.1564V20.8431C16.1671 20.0209 16.6329 19.2698 17.3692 18.9039L26.0358 14.5706C26.6432 14.2688 27.3568 14.2688 27.9642 14.5706Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M16.5133 19.6733L27 24.9167L37.4866 19.6733" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M27 37.6565V24.9165" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M21.5833 16.7915L32.4166 22.2082" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 )
 
 const StatSVG = () => (
 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M24.8333 17.25H29.1666V36.75H24.8333V17.25Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M33.5 22.6665H37.8333V36.7498H33.5V22.6665Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M16.1667 28.0835H20.5V36.7502H16.1667V28.0835Z" stroke="#444B95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M24.8333 17.25H29.1666V36.75H24.8333V17.25Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M33.5 22.6665H37.8333V36.7498H33.5V22.6665Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M16.1667 28.0835H20.5V36.7502H16.1667V28.0835Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 )
 
@@ -25,6 +27,19 @@ const UserSVG = () => (
 </svg>
 
 )
+const Payment = () => (
+<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="27" cy="27" r="26.5" fill="none" stroke="none"/>
+<path fillRule="evenodd" clipRule="evenodd" d="M29 17H21C19.8954 17 19 17.8954 19 19V35C19 36.1046 19.8954 37 21 37H33C34.1046 37 35 36.1046 35 35V23L29 17Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M29 17V23H35" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M31 28H23" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M31 32H23" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M25 24H24H23" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+
+)
+
 // SVG END ^
 
 
@@ -38,7 +53,7 @@ var cnCategoryHeadingOne = "Slider-category-Titles";
 var cnCategoryHeadingTwo = "Slider-category-Titles";
 
 
-function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree, PageName}){
+function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree, PageName}){
 
     const [inboud_year_one, setInboud_Year_One] = useState(0)
     const [inboud_year_two, setInboud_Year_Two] = useState(0)
@@ -50,6 +65,7 @@ function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, 
     const [category_two, setCategory_Two] = useState(0)
     const [inventory, setInventory] = useState(0)
     const [dashboard, setDashboard] = useState(1)
+    const [billing, setBilling] = useState(0)
     
 
 
@@ -109,22 +125,39 @@ function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, 
 
     // slider below
     var cnSlider = "year_slider";
+    var cnZero = "payment-icon";
     var cnOne = "inventory-icon";
     var cnTwo = "dashboard-icon";
 
-    if ( inventory === 1 ){
-        cnOne = "inventory-icon inventory-icon:active";
-        cnSlider = "year_slider-inactive"
-    } else if ( inventory === 0 ) {
-        cnOne = "inventory-icon inventory-icon-inactive"
-        cnSlider = "year_slider";
-    }
 
     if ( dashboard === 1 ){
         cnTwo = "dashboard-icon dashboard-icon:active";
     } else if ( dashboard === 0 ) {
         cnTwo = "dashboard-icon dashboard-icon-inactive"
     }
+
+    if ( inventory === 1 ){
+        cnOne = "inventory-icon inventory-icon:active";
+        cnSlider = "year_slider"
+        InventoryPage = true;
+    } else if ( inventory === 0 ) {
+        InventoryPage = false;
+        cnOne = "inventory-icon inventory-icon-inactive"
+        cnSlider = "year_slider-inactive";
+    }
+
+
+    if ( billing === 1 ){
+        cnZero = "payment-icon payment-icon:active";
+        BillingPage = true;
+        // cnSlider = "year_slider-inactive"
+    } else if ( billing === 0 ) {
+        BillingPage = false;
+        cnZero = "payment-icon payment-icon-inactive";
+        // cnSlider = "year_slider-inactive"
+       
+    }
+
 //  end
 
     return (
@@ -146,7 +179,8 @@ function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, 
                      onClick={()=>{
                      setDashboard(1)
                      setInventory(0)
-                    }}><InvSVG />
+                     setBilling(0)
+                    }}><StatSVG />
                      </div>
 
                      <div 
@@ -154,7 +188,17 @@ function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, 
                     onClick={()=>{
                     setInventory(1)
                     setDashboard(0)
-                    }}><StatSVG />
+                    setBilling(0)
+                    }}><InvSVG />
+                    </div>
+
+                     <div 
+                    className={cnZero} 
+                    onClick={()=>{
+                    setBilling(1)
+                    setInventory(0)
+                    setDashboard(0)
+                    }}><Payment />
                     </div>
 
                 {/* Space Below */}
@@ -167,9 +211,17 @@ function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, 
                     </div>
              </div>
 
+          
+             {
+                 BillingPage&&(
+                     <PlanCardHolder />
+                 )
+             }
+
 
                 {/* Inbound below */}
              <div className={cnSlider}>
+                 
                 <div style={{display:"flex", flexDirection:"column", flex:1}}>
                     <h1 className="SliderPageHeading">{PageName}</h1>
                     <div className={cnCategoryHeadingOne} 
@@ -262,6 +314,14 @@ function Sidebar({barWidth, TitleOne, TitleTwo, InboundYearOne, InboundYearTwo, 
                     </div>    
                 </div>
              </div>
+             {
+                 InventoryPage&&(
+                    <div style={{margin:"10px", width:'77vw', marginTop:'20px', backgroundColor:'#F9F9FF'}}>
+                        <Card />
+                    </div>
+                 )
+             }
+
         </div>
           )
 
@@ -278,7 +338,7 @@ Sidebar.defaultProps = {
     InboundYearThree: "2020",
     PageName: 'Inventory',
     // below is in flex i.e 0.2 flex
-    barWidth: 0.2
+    barWidth: 0.1
     //  end ^
 }
 

@@ -5,7 +5,7 @@ import * as IoIos from 'react-icons/io';
 
 
 
-function Dropdown({items, title, ddTitle, titleFontSize, ddposition, children, dropdown, ddwidth,ddShow, ddTitleColor, iconSize, icon, iconColor}){
+function Dropdown({items, title, ddTitle, titleFontSize, ddposition, children, dropdown, ddwidth,ddShow, ddTitleColor, iconSize, icon, iconColor, ddLeftMargin}){
 
    
  
@@ -29,6 +29,7 @@ function Dropdown({items, title, ddTitle, titleFontSize, ddposition, children, d
         <div className="dd_container">
            <p className="dd_title" style={{}}>{title}</p>
             <div className="dropdown" style={{
+                    marginLeft: ddLeftMargin,
                     width: ddwidth,
                     position: ddposition,
                     fontSize: titleFontSize,
@@ -74,7 +75,7 @@ Dropdown.defaultProps = {
      iconColor: '',
      ddposition: '',
      titleFontSize: '',
-     ddShow: true
+     ddShow: true,
 };
 
 
