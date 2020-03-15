@@ -96,6 +96,9 @@ if (upgradeComfirm === true) {
             popUpComfirmation&&(
                 <div style={{ position:'absolute', width:'100vw', display:'flex', justifyContent: 'center', height:'100vh', alignItems: 'center'}}>
                     <Popup 
+                    defaultTitle={planName1}
+                    addBut={true}
+                    underText={cost1}
                     clicked={()=>{setUpgradeConfirm(false)}}
                     />
                 </div>

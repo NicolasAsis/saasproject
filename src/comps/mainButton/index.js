@@ -11,7 +11,7 @@ import * as FeatherIcon from 'react-icons/fi';
 
 
 
-function MainButton({defaultText,width,height,textSize,addIcon,customIcon}){
+function MainButton({click, defaultText,width,height,textSize,addIcon,customIcon}){
 
     const [close,setClose] = useState(false);
 
@@ -19,6 +19,7 @@ function MainButton({defaultText,width,height,textSize,addIcon,customIcon}){
    
     return (
         <div 
+        onClick={click}
         className="butCont"
         style={{
             width:width,
@@ -32,6 +33,7 @@ function MainButton({defaultText,width,height,textSize,addIcon,customIcon}){
 }
 
 MainButton.defaultProps = {
+    click: ()=>{},
     defaultText:"Default Text",
     width:"10%",
     height:"39px",

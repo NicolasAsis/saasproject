@@ -7,7 +7,7 @@
 }
 
 @mixin flex2(){
-    flex:1;
+   
     display:flex;
     flex-direction:row;
     justify-content:flex-end;
@@ -55,16 +55,33 @@
         @include flex();
         // background-color:green;
         margin:5px;
+    }
+
+    .popupText {
+        display: flex;
+        flex-direction: column;
+        // background-color:green;
+        margin:5px;
+    }
 
     .popupTitle {
         font-family: Roboto;
-        font-size:29pt;
+        font-size:22pt;
         font-weight:500;
         line-height:34px;
         color:#444B95;
+        margin: 0;
+    }
+    .underText {
+        font-family: Roboto;
+        font-size:29pt;
+        font-weight:900;
+        line-height:34px;
+        color:#444B95;
+        margin: 0;
     }
 
-    }
+    
 
 }
 

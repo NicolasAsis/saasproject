@@ -4,7 +4,7 @@ import { IoIosClose } from "react-icons/io";
 
 import MainButton from "../mainButton";
 
-function Popup({popDisp, isClosed = true, clicked, defaultTitle, addBut, items }) {
+function Popup({popDisp, underText, isClosed = true, clicked, defaultTitle, addBut, items }) {
   const [close, setClose] = useState(false);
 
   var cn = "popupCont";
@@ -19,16 +19,24 @@ function Popup({popDisp, isClosed = true, clicked, defaultTitle, addBut, items }
 
   return (
     <div className={cn} style={{display: popDisp}}>
+     
       <div className="popupTopRow">
+      <div style={{textAlign:'center',flex:0.90, margin: 0, padding: 0, fontSize: '19pt', color: '#8C93D5'}}>Upgrade Plan</div>
+   
+        
         <div
           className="closeBut"
           onClick={clicked}
         >
           <IoIosClose className="xIcon" />
+         
         </div>
+      
       </div>
-      <div className="popupRow">
-        <p className="popupTitle">{defaultTitle}</p>
+     
+      <div className="popupText">
+        <p className="popupTitle">{defaultTitle}</p> <br />
+        <p className="underText">{underText}</p>
       </div>
       <div className="popupRow">
             {addBut&&items.map((o, i) => {return <MainButton width="18%" {...o} />; })}   

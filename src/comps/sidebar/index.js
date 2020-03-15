@@ -1,46 +1,9 @@
 import React, {useState} from 'react';
 import PlanCardHolder from '../planCardHolder'
 import Card from '../cards'
+import * as icon from '../../imgs/svg'
 
 
-// SVG BELOW
-const InvSVG = () => (
-<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M27.9642 14.5706L36.6308 18.9039C37.3671 19.2698 37.8329 20.0209 37.8333 20.8431V31.1673C37.8329 31.9894 37.3671 32.7405 36.6308 33.1064L27.9642 37.4398C27.3539 37.7452 26.6353 37.7452 26.025 37.4398L17.3583 33.1064C16.6228 32.7358 16.1609 31.9801 16.1667 31.1564V20.8431C16.1671 20.0209 16.6329 19.2698 17.3692 18.9039L26.0358 14.5706C26.6432 14.2688 27.3568 14.2688 27.9642 14.5706Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M16.5133 19.6733L27 24.9167L37.4866 19.6733" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M27 37.6565V24.9165" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M21.5833 16.7915L32.4166 22.2082" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-)
-
-const StatSVG = () => (
-<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M24.8333 17.25H29.1666V36.75H24.8333V17.25Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M33.5 22.6665H37.8333V36.7498H33.5V22.6665Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M16.1667 28.0835H20.5V36.7502H16.1667V28.0835Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-)
-
-const UserSVG = () => (
-<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="22" cy="22" r="22" fill="#444B95"/>
-</svg>
-
-)
-const Payment = () => (
-<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="27" cy="27" r="26.5" fill="none" stroke="none"/>
-<path fillRule="evenodd" clipRule="evenodd" d="M29 17H21C19.8954 17 19 17.8954 19 19V35C19 36.1046 19.8954 37 21 37H33C34.1046 37 35 36.1046 35 35V23L29 17Z" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M29 17V23H35" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M31 28H23" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M31 32H23" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M25 24H24H23" stroke="#444B95" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-
-
-)
-
-// SVG END ^
 
 
 var cnInboundHeadingOne = "year-heading";
@@ -64,8 +27,8 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
     const [category_one, setCategory_One] = useState(0)
     const [category_two, setCategory_Two] = useState(0)
     const [inventory, setInventory] = useState(0)
-    const [dashboard, setDashboard] = useState(1)
-    const [billing, setBilling] = useState(0)
+    const [dashboard, setDashboard] = useState(0)
+    const [billing, setBilling] = useState(1)
     
 
 
@@ -180,7 +143,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                      setDashboard(1)
                      setInventory(0)
                      setBilling(0)
-                    }}><StatSVG />
+                    }}><icon.StatSVG />
                      </div>
 
                      <div 
@@ -189,7 +152,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                     setInventory(1)
                     setDashboard(0)
                     setBilling(0)
-                    }}><InvSVG />
+                    }}><icon.InvSVG />
                     </div>
 
                      <div 
@@ -198,7 +161,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                     setBilling(1)
                     setInventory(0)
                     setDashboard(0)
-                    }}><Payment />
+                    }}><icon.Payment />
                     </div>
 
                 {/* Space Below */}
@@ -207,7 +170,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                 {/* Space End */}
 
                 <div className="userIcon">
-                        <UserSVG />
+                        <icon.UserSVG />
                     </div>
              </div>
 
