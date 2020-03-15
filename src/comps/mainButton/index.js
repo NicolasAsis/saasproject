@@ -11,7 +11,7 @@ import * as FeatherIcon from 'react-icons/fi';
 
 
 
-function MainButton({defaultText,width,height,textSize,addIcon,customIcon}){
+function MainButton({defaultText,width,height,textSize,addIcon,customIcon,backgroundColor}){
 
     const [close,setClose] = useState(false);
 
@@ -22,7 +22,8 @@ function MainButton({defaultText,width,height,textSize,addIcon,customIcon}){
         className="butCont"
         style={{
             width:width,
-            height:height
+            height:height,
+            backgroundColor:backgroundColor
         }}
         >
                 {addIcon&&<Icon color='white' size={15}/>}
@@ -37,7 +38,8 @@ MainButton.defaultProps = {
     height:"39px",
     textSize:"15px",
     addIcon:false,
-    customIcon:"FiSave"
+    customIcon:"FiSave",
+    backgroundColor:"#8C93D5"
 }
 
 
