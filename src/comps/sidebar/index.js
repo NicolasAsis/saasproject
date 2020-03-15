@@ -16,6 +16,12 @@ var cnCategoryHeadingOne = "Slider-category-Titles";
 var cnCategoryHeadingTwo = "Slider-category-Titles";
 
 
+// create a system where user pay and then ispaid becomes 1
+
+var isPaid = 0;
+var freeze = 1;
+
+
 function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree, PageName}){
 
     const [inboud_year_one, setInboud_Year_One] = useState(0)
@@ -140,18 +146,18 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                     <div 
                      className={cnTwo} 
                      onClick={()=>{
-                     setDashboard(1)
+                     setDashboard(isPaid)
                      setInventory(0)
-                     setBilling(0)
+                     setBilling(freeze)
                     }}><icon.StatSVG />
                      </div>
 
                      <div 
                     className={cnOne} 
                     onClick={()=>{
-                    setInventory(1)
+                    setInventory(isPaid)
                     setDashboard(0)
-                    setBilling(0)
+                    setBilling(freeze)
                     }}><icon.InvSVG />
                     </div>
 

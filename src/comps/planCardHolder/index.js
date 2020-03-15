@@ -22,6 +22,12 @@ function PlanCardHolder({popUpComfirmation = false,  BillingPage = false, Subscr
 
     var Billingcolor = "grey";
     var Subscriptioncolor = "grey";
+
+    var Buttons = [
+        {
+            defaultText: 'Checkout',
+        }
+    ]
    
 
     if(plan1 === 1){
@@ -72,9 +78,10 @@ function PlanCardHolder({popUpComfirmation = false,  BillingPage = false, Subscr
 
 //  end
 
-var planName1 = 'Starter';
-var planName2 = 'Buisness';
-var planName3 = 'Enterprise';
+var planName1 = 'Starter Plan';
+var planName2 = 'Buisness Plan';
+var planName3 = 'Enterprise Plan';
+var costFree = '$0.00';
 var cost1 = '$10';
 var cost2 = '$15';
 var cost3 = '$25';
@@ -96,9 +103,13 @@ if (upgradeComfirm === true) {
             popUpComfirmation&&(
                 <div style={{ position:'absolute', width:'100vw', display:'flex', justifyContent: 'center', height:'100vh', alignItems: 'center'}}>
                     <Popup 
-                    defaultTitle={planName1}
+                    items={Buttons}
+                    Proceed={()=>{alert('hi')}}
+                    defaultTitle={ 'Free Trial' + ' ' + planName1}
                     addBut={true}
-                    underText={cost1}
+                    costText={costFree}
+                    underTextLineOne={'Your payment will come after your 7 day free trial'}
+                    underTextLineTwo={'You can cancle time'}
                     clicked={()=>{setUpgradeConfirm(false)}}
                     />
                 </div>

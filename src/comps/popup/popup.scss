@@ -1,5 +1,5 @@
 @mixin flex(){
-    flex:1;
+
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -7,7 +7,6 @@
 }
 
 @mixin flex2(){
-   
     display:flex;
     flex-direction:row;
     justify-content:flex-end;
@@ -15,6 +14,8 @@
 }
 
 .popupCont {
+    font-family: Roboto;
+    font-weight: 900;
     width:50vw;
     height:65vh;
     border: 3px solid #8C93D5;
@@ -23,15 +24,18 @@
     display:flex;
     flex-direction:column;
     z-index: 1;
-  
+ 
     // justify-content:center;
     // align-items:center;
 
     .popupTopRow {
         @include flex2();
         // background-color:green;
-        margin:5px;
+        color:#444B95;
+        margin: 5px;
         padding-right:2%;
+        align-items: flex-start;
+        flex: 2;
 
         .closeBut {
             width:49px;
@@ -42,7 +46,6 @@
             justify-content:center;
             align-items:center;
             
-
             .xIcon {
                 width:90%;
                 height:90%;
@@ -54,7 +57,8 @@
     .popupRow {
         @include flex();
         // background-color:green;
-        margin:5px;
+        flex: 0.9;
+
     }
 
     .popupText {
@@ -62,28 +66,37 @@
         flex-direction: column;
         // background-color:green;
         margin:5px;
+        flex: 1.5;
     }
 
     .popupTitle {
         font-family: Roboto;
-        font-size:22pt;
+        font-size:28pt;
         font-weight:500;
         line-height:34px;
-        color:#444B95;
+        color:#8C93D5;
         margin: 0;
     }
-    .underText {
+    .costText {
         font-family: Roboto;
         font-size:29pt;
         font-weight:900;
         line-height:34px;
         color:#444B95;
         margin: 0;
-    }
-
-    
-
+    } 
 }
+
+.underText {
+    display: flex;
+    flex-direction: column;
+    font-size: 10pt;
+    // background-color:green;
+    margin:5px;
+    margin-bottom: 3vh;
+    color: #444B95;
+}
+
 
 .popup_close {
     display:none;

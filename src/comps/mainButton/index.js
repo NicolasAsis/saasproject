@@ -1,17 +1,10 @@
 import React, {useState} from 'react';
-
-import {FiMoreVertical} from 'react-icons/fi';
-
-import {FiMoreHorizontal} from 'react-icons/fi';
-
-import { IoIosClose } from "react-icons/io";
-
 import * as FeatherIcon from 'react-icons/fi';
 
 
 
 
-function MainButton({click, defaultText,width,height,textSize,addIcon,customIcon}){
+function MainButton({click, bgCol, defaultText,width,height,textSize,addIcon,customIcon}){
 
     const [close,setClose] = useState(false);
 
@@ -22,6 +15,7 @@ function MainButton({click, defaultText,width,height,textSize,addIcon,customIcon
         onClick={click}
         className="butCont"
         style={{
+            backgroundColor: bgCol,
             width:width,
             height:height
         }}

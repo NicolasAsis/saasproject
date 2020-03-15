@@ -4,7 +4,7 @@ import { IoIosClose } from "react-icons/io";
 
 import MainButton from "../mainButton";
 
-function Popup({popDisp, underText, isClosed = true, clicked, defaultTitle, addBut, items }) {
+function Popup({popDisp, underTextLineOne, underTextLineTwo, costText, Proceed, isClosed = true, clicked, defaultTitle, addBut, items }) {
   const [close, setClose] = useState(false);
 
   var cn = "popupCont";
@@ -21,7 +21,7 @@ function Popup({popDisp, underText, isClosed = true, clicked, defaultTitle, addB
     <div className={cn} style={{display: popDisp}}>
      
       <div className="popupTopRow">
-      <div style={{textAlign:'center',flex:0.90, margin: 0, padding: 0, fontSize: '19pt', color: '#8C93D5'}}>Upgrade Plan</div>
+      <div style={{textAlign:'center',flex:0.90, margin: 0, marginTop: '10px', padding: 0, fontSize: '19pt', color: '#444B95'}}>Upgrade Plan</div>
    
         
         <div
@@ -36,10 +36,15 @@ function Popup({popDisp, underText, isClosed = true, clicked, defaultTitle, addB
      
       <div className="popupText">
         <p className="popupTitle">{defaultTitle}</p> <br />
-        <p className="underText">{underText}</p>
+        <p className="costText">{costText}</p>
+      </div>
+     
+      <div style={{flex: 1.2, fontSize: "10pt"}}>
+        <p className="underText">{underTextLineOne}</p> 
+        <p className="underText">{underTextLineTwo}</p>
       </div>
       <div className="popupRow">
-            {addBut&&items.map((o, i) => {return <MainButton width="18%" {...o} />; })}   
+            {addBut&&items.map((o, i) => {return <MainButton click={Proceed} width={"100%"} bgCol={'#444B95'} height={'100%'} {...o} />; })}   
       </div>
     </div>
   );
@@ -50,6 +55,7 @@ Popup.defaultProps = {
   addBut: false,
   isClosed: false,
   clicked: ()=>{},
+  Proceed: ()=>{},
   popDisp: false,
   items: [
     {

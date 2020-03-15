@@ -86,6 +86,7 @@ function Login({login = false, showLogin = true, choosePlan = false}){
 
                     <div style={{flex: 1, width:'30vw'}}>
                         <MainButton
+                    
                          click={()=>{setUnlock(!unlock)}}
                          width={'30vw'}
                          defaultText={"Choose Plan"} />
