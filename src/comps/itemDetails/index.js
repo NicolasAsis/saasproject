@@ -87,7 +87,7 @@ function ItemDetails({ customIcon, itemDetWidth, imgName, addSelectedBar}) {
               display:'flex', 
               width:'50%', flex:1, 
               flexDirection:'row',
-              marginTop: "5vh", 
+              marginTop: "4vh", 
               marginRight: '5vw',
               position: 'relative'
               }}>

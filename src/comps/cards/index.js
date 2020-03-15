@@ -59,25 +59,34 @@ function Card({headerBarFontSize, cardFontSize, cardFontFamily, headBarFontFamil
 ]
     
 // #1 Makes Tab color change on click
+    var IbTabCol = 'grey'
+    var ObTabCol = 'grey'
     var cnOne = "tab1";
     var cnTwo = "tab2";
 
     if ( inbound === 1 ){
         cnOne = "tab1 tab:active";
+        ObTabCol = "#8C93D5";
+        IbTabCol = "grey";
     } else if ( inbound === 0 ) {
+        ObTabCol = "grey"
         cnOne = "tab1 tab-inactive"
     }
 
     if ( outbound === 1 ){
+        IbTabCol = "#8C93D5"
+        ObTabCol = "grey"
         cnTwo = "tab2 tab:active";
     } else if ( outbound === 0 ) {
+        IbTabCol = "grey"
         cnTwo = "tab2 tab-inactive"
     }
 //  end
 
     return (
 
-        <div className="card">
+        <div className="card" style={{textAlign: 'left'}}>
+            <h1 style={{color: 'rgb(140, 147, 213)', margin:"0px", paddingBottom: "20px"}}>Inventory/2020</h1>
             <div className="tab-container">
        
             <div 
@@ -85,7 +94,8 @@ function Card({headerBarFontSize, cardFontSize, cardFontFamily, headBarFontFamil
                 fontSize:cardFontSize,
                 fontFamily:cardFontFamily,
                 borderTopLeftRadius:cardBorderRadius,
-                borderTopRightRadius:cardBorderRadius
+                borderTopRightRadius:cardBorderRadius,
+                color: ObTabCol
             }}
                 className={cnOne} 
                 onClick={()=>{
@@ -100,7 +110,8 @@ function Card({headerBarFontSize, cardFontSize, cardFontFamily, headBarFontFamil
                 fontSize:cardFontSize,
                 fontFamily:cardFontFamily,
                 borderTopLeftRadius:cardBorderRadius,
-                borderTopRightRadius:cardBorderRadius
+                borderTopRightRadius:cardBorderRadius,
+                color: IbTabCol
             }}
                 className={cnTwo} 
                 onClick={()=>{
@@ -110,12 +121,13 @@ function Card({headerBarFontSize, cardFontSize, cardFontFamily, headBarFontFamil
              </div>
                 <div className="white-space"></div>
             </div>
-            <div style={{ display:'flex', flex:1, margin: "15px"}}>
-            <FilterBar />
+            <div style={{ display:'flex', flex:1, padding: "15px", backgroundColor:'white'}}>
+            <FilterBar
+             />
             </div>
            
         
-            <div className="body">
+            <div className="content-body">
          
         
                 <div className="item-section">

@@ -51,7 +51,7 @@ function FilterBar({placeholder, placholderColor}){
             ddTitle = {
                 Monthitems[0].itemTitle
             }
-            ddwidth = {"40%"}
+            ddLeftMargin={"5vw"}
             ddTitleColor = {'#888FD3'}
             iconSize = {13}
             icon = {'IoIosArrowDown'}
@@ -60,15 +60,17 @@ function FilterBar({placeholder, placholderColor}){
             ddwidth = {"10%"}
             key={0}
             />
-
+            
+    
             <Dropdown 
             items={Modelitems}
             dropdown={true}
             title= {"model"}
+            titleFontSize={"13px"}
             ddTitle = {
                 Modelitems[0].itemTitle
             }
-            ddwidth = {"40%"}
+            ddLeftMargin={"5vw"}
             ddTitleColor = {'#888FD3'}
             iconSize = {13}
              icon = {'IoIosArrowDown'}

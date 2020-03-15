@@ -4,23 +4,25 @@ import { IoIosClose } from "react-icons/io";
 
 import MainButton from "../mainButton";
 
-function Popup({ defaultTitle, addBut, items }) {
+function Popup({popDisp, isClosed = true, clicked, defaultTitle, addBut, items }) {
   const [close, setClose] = useState(false);
 
   var cn = "popupCont";
 
-  if (close) {
+ 
+
+  if (isClosed === true){
     cn = "popup_close";
+  } else {
+    cn = "popupCont"
   }
 
   return (
-    <div className={cn}>
+    <div className={cn} style={{display: popDisp}}>
       <div className="popupTopRow">
         <div
           className="closeBut"
-          onClick={() => {
-            setClose(!close);
-          }}
+          onClick={clicked}
         >
           <IoIosClose className="xIcon" />
         </div>
@@ -38,6 +40,9 @@ function Popup({ defaultTitle, addBut, items }) {
 Popup.defaultProps = {
   defaultTitle: "Default Title",
   addBut: false,
+  isClosed: false,
+  clicked: ()=>{},
+  popDisp: false,
   items: [
     {
       defaultText: "Yes"

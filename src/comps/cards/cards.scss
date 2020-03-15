@@ -2,6 +2,7 @@
 display: flex;
 flex: 2;
 flex-direction: column;
+margin-right: 20px;
 
 
 // width:100%;
@@ -65,15 +66,15 @@ flex-direction: column;
     background-color: none;
 }
 
-.body {
+.content-body {
     color: black;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.585) 10px 50px 52px;
+    box-shadow: rgba(0, 0, 0, 0.385) 10px 50px 52px;
     padding: 10px;
     display: flex;
     flex: 1;
-    flex-direction: column;;
-    z-index: -1;
+    flex-direction: column;
+    
 }
 
 .item-section {
@@ -81,12 +82,6 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     background-color: white;
+  
 }
-.item {
-    flex: 1;
-    margin:1px;
-    justify-content: center;
-    background-color: grey;
-    padding: 5px;
 
-}
