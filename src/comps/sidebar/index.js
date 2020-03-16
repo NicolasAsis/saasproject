@@ -18,8 +18,8 @@ var cnCategoryHeadingTwo = "Slider-category-Titles";
 
 // create a system where user pay and then ispaid becomes 1
 
-var isPaid = 1;
-var freeze = 0;
+var isPaid = 0;
+var freeze = 1;
 
 
 function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree, PageName}){
@@ -165,14 +165,14 @@ var ShowInbound = false;
                 <div className="space-above"></div>
                 {/* Space End */}
 
-                    <div 
+                    {/* <div 
                      className={cnTwo} 
                      onClick={()=>{
                      setDashboard(isPaid)
                      setInventory(0)
                      setBilling(freeze)
                     }}><icon.StatSVG />
-                     </div>
+                     </div> */}
 
                      <div 
                     className={cnOne} 
@@ -205,7 +205,11 @@ var ShowInbound = false;
           
              {
                  BillingPage&&(
-                     <PlanCardHolder />
+                     <PlanCardHolder
+                     unlock={()=>{
+                         isPaid = 1;
+                         freeze = 0;
+                     }} />
                  )
              }
 

@@ -7,7 +7,7 @@ import InvoiceForm from '../invoiceForm'
 
 
 
-function PlanCardHolder({popUpComfirmation = false,  BillingPage = false, SubscriptionPage = true, cardFontSize, cardFontFamily, headBarFontFamily, HeadBarHeight, cardBorderRadius }){
+function PlanCardHolder({popUpComfirmation = false, unlock, BillingPage = false, SubscriptionPage = true, cardFontSize, cardFontFamily, cardBorderRadius }){
     const [subscription, setSubscription] = useState(1);
     const [billing, setBilling] = useState(0);
     const [active, setActive] = useState(true);
@@ -16,6 +16,8 @@ function PlanCardHolder({popUpComfirmation = false,  BillingPage = false, Subscr
     const [plan1, setPlan1] = useState(0);
     const [plan2, setPlan2] = useState(0);
     const [plan3, setPlan3] = useState(0);
+    const [toCheckout, setToCheckout] = useState(true);
+    const [showCheckout, setShowCheckout] = useState(false);
 
     var bgActiveCol1 = "white";
     var bgActiveCol2 = "white";
@@ -105,7 +107,10 @@ if (upgradeComfirm === true) {
                 <div style={{ position:'absolute', width:'100vw', display:'flex', justifyContent: 'center', height:'100vh', alignItems: 'center'}}>
                     <Popup 
                     items={Buttons}
-                    Proceed={()=>{alert('hi')}}
+                    Proceed={()=>{setToCheckout(!toCheckout); setShowCheckout(!showCheckout)}}
+                    toCheckout={toCheckout}
+                    ShowCheckout={showCheckout}
+                    UnlockFeatures={unlock}
                     defaultTitle={ 'Free Trial' + ' ' + planName1}
                     addBut={true}
                     costText={costFree}
