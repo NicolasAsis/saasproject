@@ -18,8 +18,8 @@ var cnCategoryHeadingTwo = "Slider-category-Titles";
 
 // create a system where user pay and then ispaid becomes 1
 
-var isPaid = 0;
-var freeze = 1;
+var isPaid = 1;
+var freeze = 0;
 
 
 function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true, TitleTwo, InboundYearOne, InboundYearTwo, InboundYearThree, OutboundYearOne, OutboundYearTwo, OutboundYearThree, PageName}){
@@ -31,23 +31,39 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
     const [outbound_year_two, setOutbound_Year_Two] = useState(0)
     const [outbound_year_three, setOutbound_Year_Three] = useState(0)
     const [category_one, setCategory_One] = useState(0)
-    const [category_two, setCategory_Two] = useState(0)
+    const [category_two, setCategory_Two] = useState(1)
     const [inventory, setInventory] = useState(0)
     const [dashboard, setDashboard] = useState(0)
     const [billing, setBilling] = useState(1)
-    
+
 
 
 // INBOUND OR OUT BOUND ACTIVE INACTIVE BELOW
+var setPageBySlider = false;
+var whatYear = "";
+var ShowOutbound = true;
+var ShowInbound = false;
     if ( category_one === 1){
-        cnCategoryHeadingOne = "Slider-category-Titles Slider-category-Titles-active"
+        cnCategoryHeadingOne = "Slider-category-Titles Slider-category-Titles-active";
+        setPageBySlider = true;
+        console.log(setPageBySlider)
+        // ShowOutbound = true;
+        // ShowInbound = false;
     } else if ( category_one === 0 ) {
+        // ShowOutbound = false;
+        // ShowInbound = true;
         cnCategoryHeadingOne = "Slider-category-Titles"
     }
     
     if ( category_two === 1){
-        cnCategoryHeadingTwo = "Slider-category-Titles Slider-category-Titles-active"
+        cnCategoryHeadingTwo = "Slider-category-Titles Slider-category-Titles-active";
+        setPageBySlider = false;
+        console.log(setPageBySlider)
+        // ShowOutbound = false;
+        // ShowInbound = true;
     } else if ( category_two === 0 ) {
+        // ShowOutbound = true;
+        // ShowInbound = false;
         cnCategoryHeadingTwo = "Slider-category-Titles"
     }
     // End
@@ -55,18 +71,21 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
     // Color change on selected year for Inbound Below
     
     if ( inboud_year_one === 1){
-        cnInboundHeadingOne = "year-heading year-heading_active"
+        cnInboundHeadingOne = "year-heading year-heading_active";
+        whatYear = InboundYearOne;
     } else if ( inboud_year_one === 0 ) {
         cnInboundHeadingOne = "year-heading"
     }
     if ( inboud_year_two === 1){
-        cnInboundHeadingTwo = "year-heading year-heading_active"
+        cnInboundHeadingTwo = "year-heading year-heading_active";
+        whatYear = InboundYearTwo;
     } else if ( inboud_year_two === 0 ) {
         cnInboundHeadingTwo = "year-heading"
 
     }
     if ( inboud_year_three === 1){
         cnInboundHeadingThree = "year-heading year-heading_active"
+        whatYear = InboundYearThree;
     } else if ( inboud_year_three === 0 ) {
         cnInboundHeadingThree = "year-heading"
     }
@@ -75,18 +94,21 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
     // Color change on selected year for Outbound Below
     
     if ( outbound_year_one === 1){
-        cnOutboundHeadingOne = "year-heading year-heading_active"
+        cnOutboundHeadingOne = "year-heading year-heading_active";
+        whatYear = InboundYearOne;
     } else if ( outbound_year_one === 0 ) {
         cnOutboundHeadingOne = "year-heading"
     }
     if ( outbound_year_two === 1){
-        cnOutboundHeadingTwo = "year-heading year-heading_active"
+        cnOutboundHeadingTwo = "year-heading year-heading_active";
+        whatYear = InboundYearTwo;
     } else if ( outbound_year_two === 0 ) {
         cnOutboundHeadingTwo = "year-heading"
 
     }
     if ( outbound_year_three === 1){
-        cnOutboundHeadingThree = "year-heading year-heading_active"
+        cnOutboundHeadingThree = "year-heading year-heading_active";
+        whatYear = InboundYearThree;
     } else if ( inboud_year_three === 0 ) {
         cnOutboundHeadingThree = "year-heading"
     }
@@ -206,6 +228,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                         setInboud_Year_Three(0)
                         setCategory_One(1)
                         setCategory_Two(0)
+                       
                         // unset outbound actives
                         setOutbound_Year_One(0)
                         setOutbound_Year_Two(0)
@@ -218,6 +241,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                         setInboud_Year_Three(0)
                         setCategory_One(1)
                         setCategory_Two(0)
+                       
                         // unset outbound actives
                         setOutbound_Year_One(0)
                         setOutbound_Year_Two(0)
@@ -230,6 +254,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                         setInboud_Year_One(0)
                         setCategory_One(1)
                         setCategory_Two(0)
+                      
                         // unset outbound actives
                         setOutbound_Year_One(0)
                         setOutbound_Year_Two(0)
@@ -251,6 +276,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                         setOutbound_Year_Three(0)
                         setCategory_One(0)
                         setCategory_Two(1)
+                        whatYear = InboundYearOne;
                         // unset inbound actives
                         setInboud_Year_Two(0)
                         setInboud_Year_One(0)
@@ -263,6 +289,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                         setOutbound_Year_Three(0)
                         setCategory_One(0)
                         setCategory_Two(1)
+                        whatYear = inboud_year_two;
                         // unset inbound actives
                         setInboud_Year_Two(0)
                         setInboud_Year_One(0)
@@ -275,6 +302,7 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
                         setOutbound_Year_One(0)
                         setCategory_One(0)
                         setCategory_Two(1)
+                        whatYear = inboud_year_three;
                         // unset inbound actives
                         setInboud_Year_Two(0)
                         setInboud_Year_One(0)
@@ -286,7 +314,12 @@ function Sidebar({barWidth, TitleOne, BillingPage = false, InventoryPage = true,
              {
                  InventoryPage&&(
                     <div style={{margin:"10px", width:'77vw', marginTop:'20px', backgroundColor:'#F9F9FF'}}>
-                        <Card />
+                        <Card 
+                        setPage={setPageBySlider}
+                        InvYear={whatYear}
+                        // ShowInbound={ShowInbound}
+                        // ShowOutbound={ShowOutbound}
+                        />
                     </div>
                  )
              }

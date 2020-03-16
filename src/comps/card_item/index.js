@@ -37,7 +37,7 @@ function CardItem({moreInfo,children,items}){
         }}>
             <div className="itemSubCont">
             {items.map((o, i) => {
-                return <ItemInfo {...o} />;
+                return <ItemInfo key={i} {...o} />;
             })}
                 <div className="itemInfo"><StatusDropdown /></div>
                 <div className="itemInfo"> {moreDetIcon}</div>

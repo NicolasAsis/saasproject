@@ -40,7 +40,7 @@ function StatusDropdown({ dropdown, statusText, children, items, circleColor,tex
       {children}
       <div className={cn}>
         {items.map((o, i) => {
-          return <StatusItem {...o} />;
+          return <StatusItem key={i} {...o} />;
         })}
       </div>
     </div>

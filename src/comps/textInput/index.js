@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import * as FeatherIcon from 'react-icons/fi';
 
-function TextInput({customIcon, customTitle,titleColor,inputWidth,addPlaceholder,customPlaceholder,inputBorder}) {
+function TextInput({customIcon, customTitle,titleColor,inputWidth,addPlaceholder,customPlaceholder,inputBorder,marginRight}) {
 
 var Icon = FeatherIcon[customIcon];
 
@@ -13,9 +13,9 @@ if(addPlaceholder) {
 }
 
   return (
-    <div className="textInputCont" style={{width:inputWidth}}>
+    <div className="textInputCont" style={{width:inputWidth,marginRight:marginRight}}>
         <p className="inputTitle" style={{color:titleColor}}>{customTitle}</p>
-        <input type="text" placeholder={placeHolder} className="inputBox" style={{width:inputWidth,borderColor:inputBorder}}/>
+        <input type="text" placeholder={placeHolder} className="inputBox" style={{borderColor:inputBorder}}/>
     </div>
   );
 }
@@ -27,7 +27,8 @@ TextInput.defaultProps = {
     inputWidth:"40%",
     addPlaceholder:false,
     customPlaceholder:"Test",
-    inputBorder:"#D8DBFF"
+    inputBorder:"#D8DBFF",
+    marginRight:"10px"
 };
 
 export default TextInput;

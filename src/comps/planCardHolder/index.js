@@ -3,6 +3,7 @@ import Popup from '../popup';
 import './planCardHolder.scss'
 
 import PlanCard from '../planCard';
+import InvoiceForm from '../invoiceForm'
 
 
 
@@ -269,7 +270,10 @@ if (upgradeComfirm === true) {
                 </div>
                 <div className="body">
 
-                    <div style={{flexDirection: 'row'}}className="plan-section">
+                    
+
+                    <div style={{flexDirection: 'row', marginRight:'5vw'}}className="plan-section">
+                    <InvoiceForm />
                     
                     </div>  
                 </div>

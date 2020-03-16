@@ -1,14 +1,24 @@
 import React, {useState} from 'react';
 import * as FeatherIcon from 'react-icons/fi';
+import * as IoIcon from 'react-icons/io';
 
 
 
 
-function MainButton({click, bgCol, defaultText,width,height,textSize,addIcon,customIcon}){
+
+function MainButton({click, IosIcon = false, bgCol, defaultText,width,height,textSize,addIcon,customIcon}){
 
     const [close,setClose] = useState(false);
 
     var Icon = FeatherIcon[customIcon];
+    var Icon2 = IoIcon[customIcon];
+    var Choose = 0;
+    
+    if ( IosIcon === false ) {
+        Choose = Icon;
+    } else {
+        Choose = Icon2
+    }
    
     return (
         <div 
@@ -17,10 +27,11 @@ function MainButton({click, bgCol, defaultText,width,height,textSize,addIcon,cus
         style={{
             backgroundColor: bgCol,
             width:width,
-            height:height
+            height:height,
         }}
         >
-                {addIcon&&<Icon color='white' size={15}/>}
+             
+                {addIcon&&<Choose color='white' size={15}/>}
                 <p className="butText" style={{fontSize:textSize}}>{defaultText}</p>
         </div>
     )
@@ -33,7 +44,9 @@ MainButton.defaultProps = {
     height:"39px",
     textSize:"15px",
     addIcon:false,
-    customIcon:"FiSave"
+    customIcon:"FiSave",
+    backgroundColor:"#8C93D5",
+    IosIcon: false,
 }
 
 
