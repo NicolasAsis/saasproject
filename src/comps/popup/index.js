@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import { IoIosClose } from "react-icons/io";
 
 import MainButton from "../mainButton";
-import CheckoutForm from '../CheckoutForm';
+
 import Container from "../CheckoutForm";
 
 function Popup({popDisp, UnlockFeatures,  showComfirmationPage = false, ShowCheckout = false, underTextLineOne, toCheckout = true, underTextLineTwo, costText, Proceed, isClosed = true, clicked, defaultTitle, addBut, items }) {
-  const [close, setClose] = useState(false);
+
   const [showComf, setShowComf] = useState(false);
-  const [some, setSome] = useState(false);
+
   
 
   if(showComf){
@@ -72,6 +72,19 @@ function Popup({popDisp, UnlockFeatures,  showComfirmationPage = false, ShowChec
 {
   ShowCheckout&&(
     <div style={{flex:1, display:'flex', flexDirection:'column'}}>
+        <div className="popupTopRow" style={{flex:0.4}}>
+      <div style={{textAlign:'center',flex:0.90, margin: 0, marginTop: '10px', padding: 0, fontSize: '19pt', color: '#444B95'}}>Enter Credit Card Info</div>
+   
+        
+        <div
+          className="closeBut"
+          onClick={clicked}
+        >
+          <IoIosClose className="xIcon" />
+         
+        </div>
+      
+      </div>
       <Container
       confirmPayment={()=>{setShowComf(!showComf)}} />
     </div>

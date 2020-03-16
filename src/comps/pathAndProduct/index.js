@@ -65,7 +65,7 @@ function Login({login = false, showLogin = true, choosePlan = false}){
                 width={"30vw"}
                 />
 
-                <div style={{width:'30vw'}}><p style={{display:'inline'}}>Don't have and account?</p><a href="https://www.poop.com" style={{display:'inline'}}>SignUp</a></div>
+                <div style={{width:'30vw'}}><p style={{display:'inline'}}>Already have an account?</p><a href="https://www.poop.com" style={{display:'inline'}}>Login</a></div>
 
                 </div>
             </div>

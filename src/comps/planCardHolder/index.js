@@ -101,7 +101,7 @@ if (upgradeComfirm === true) {
 }
 
     return (
-    <div style={{}}>
+    <div style={{overflowY: "hidden"}}>
         {
             popUpComfirmation&&(
                 <div style={{ position:'absolute', width:'100vw', display:'flex', justifyContent: 'center', height:'100vh', alignItems: 'center'}}>
