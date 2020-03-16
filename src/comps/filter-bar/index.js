@@ -51,26 +51,32 @@ function FilterBar({placeholder, placholderColor}){
             ddTitle = {
                 Monthitems[0].itemTitle
             }
-            ddwidth = {1}
+            ddLeftMargin={"5vw"}
             ddTitleColor = {'#888FD3'}
             iconSize = {13}
             icon = {'IoIosArrowDown'}
             iconColor = {'#888FD3'}
+            ddposition = {'absolute'}
+            ddwidth = {"10%"}
             key={0}
             />
-
+            
+    
             <Dropdown 
             items={Modelitems}
             dropdown={true}
             title= {"model"}
+            titleFontSize={"13px"}
             ddTitle = {
                 Modelitems[0].itemTitle
             }
-            ddwidth = {1}
+            ddLeftMargin={"5vw"}
             ddTitleColor = {'#888FD3'}
             iconSize = {13}
              icon = {'IoIosArrowDown'}
              iconColor = {'#888FD3'}
+             ddposition = {'absolute'}
+             ddwidth = {"10%"}
             key={1}
             />
 

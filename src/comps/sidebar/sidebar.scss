@@ -1,11 +1,10 @@
-
-
 body {
     font-family: 'Roboto', sans-serif;
+}
+    
 
 .bar {
     display: flex;
-    height: 100vh;
     flex-direction: column;
     background-color: white;
     align-content: center;
@@ -20,7 +19,8 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    width: 50vw;
+
+    
 }
 
 .year-heading {
@@ -29,6 +29,8 @@ body {
     justify-content: center;
     align-items: center;
     color:  rgba(65, 51, 153, 0.379);;
+    
+    
 }
 .year-heading_active {
    color: rgb(65, 51, 153);
@@ -60,11 +62,12 @@ body {
 // Slider 
 .year_slider {
     display: flex;
-    width: 20vw;
+    width: 15vw;
     background-color: rgba(240, 240, 240, 0.263);
     height: 100vh;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.249) -10px 0px 20px 5px;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.109) 1px 0px 20px 5px;
     
 }
 //  Slider Hidden
@@ -95,20 +98,36 @@ body {
     border-radius: 140px;
     background-color: #8C93D5;
     align-self: center;
-  
+}
+.payment-icon {
+    flex: 1;
+    margin: 10px;
+    border-radius: 140px;
+    background-color: #8C93D5;
+    align-self: center;
+   
+}
+
+.payment-icon:active {
+    background-color: #8C93D5 ;
+}
+
+.payment-icon-inactive {
+    
+    background-color: white;
 }
 
 .dashboard-icon:active {
     background-color: #8C93D5 ;
 }
 
-.inventory-icon:active {
-    background-color: #8C93D5; 
-}
-
 .dashboard-icon-inactive {
     
     background-color: white;
+}
+
+.inventory-icon:active {
+    background-color: #8C93D5; 
 }
 
 .inventory-icon-inactive {
@@ -121,5 +140,4 @@ body {
 
 .space-above {
     flex: 2;
-}
 }

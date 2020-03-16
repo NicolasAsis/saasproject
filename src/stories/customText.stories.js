@@ -83,7 +83,7 @@ export const DefaultCustomTextUp = () => {
                 TextBoxDimensionsWidth = {''}
                 textBoxBG = {'black'}
                 textBoxFlex = {'1'}
-                TextAlign = {'flex-end'}
+                TextAlign = {'center'}
                 justifyText = {''}
                 textBoxdisplay = {'flex'}
                 alignTextDiv = {''}
@@ -110,7 +110,7 @@ export const DefaultCustomTextDown = () => {
                 TextBoxDimensionsWidth = {''}
                 textBoxBG = {'black'}
                 textBoxFlex = {'1'}
-                TextAlign = {'flex-end'}
+                TextAlign = {'center'}
                 justifyText = {''}
                 textBoxdisplay = {'flex'}
                 alignTextDiv = {''}

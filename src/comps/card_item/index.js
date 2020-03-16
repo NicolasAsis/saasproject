@@ -11,7 +11,7 @@ import StatusDropdown from '../statusDropdown';
 import ItemDetails from '../itemDetails'
 
 
-function CardItem({moreInfo,children}){
+function CardItem({moreInfo,children,items}){
 
     const [drop,setDrop] = useState(false);
     const [active,setActive] = useState(false);
@@ -36,19 +36,15 @@ function CardItem({moreInfo,children}){
             setActive(!active);
         }}>
             <div className="itemSubCont">
-                <ItemInfo infoText="Jan 25"/>
-                <ItemInfo />
-                <ItemInfo />
-                <ItemInfo />
-                <ItemInfo />
-                <ItemInfo />
-                <ItemInfo />
+            {items.map((o, i) => {
+                return <ItemInfo key={i} {...o} />;
+            })}
                 <div className="itemInfo"><StatusDropdown /></div>
                 <div className="itemInfo"> {moreDetIcon}</div>
             </div>
             {children}
             <div className={cn}>
-                <ItemDetails />
+                <ItemDetails  />
             </div>
         </div>
     )
@@ -56,7 +52,30 @@ function CardItem({moreInfo,children}){
 
 CardItem.defaultProps = {
     moreInfo:false,
-    children:null
+    children:null,
+    items: [
+        {
+          infoText: "Default"
+        },
+        {
+            infoText: "Default"
+        },
+        {
+            infoText: "Default"
+        },
+        {
+            infoText: "Default"
+        },
+        {
+            infoText: "Default"
+        },
+        {
+            infoText: "Default"
+        },
+        {
+            infoText: "Default"
+        }
+      ]
 }
 
 
